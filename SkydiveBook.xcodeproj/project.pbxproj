@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		960B79362059A5CB00690CF8 /* JumpRegistratonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960B79352059A5CB00690CF8 /* JumpRegistratonViewController.swift */; };
+		962B48EA205F5B5A00476EDE /* ProfilePic.png in Resources */ = {isa = PBXBuildFile; fileRef = 962B48E9205F5B5A00476EDE /* ProfilePic.png */; };
+		96A946CC20570B3100B564CF /* LogbookIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A946C920570B3100B564CF /* LogbookIcon.png */; };
+		96A946CD20570B3100B564CF /* WeatherIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A946CA20570B3100B564CF /* WeatherIcon.png */; };
+		96A946CE20570B3100B564CF /* ProfileIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A946CB20570B3100B564CF /* ProfileIcon.png */; };
 		96BBAC1F204DC16500DDE9EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BBAC1E204DC16500DDE9EE /* AppDelegate.swift */; };
-		96BBAC21204DC16500DDE9EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BBAC20204DC16500DDE9EE /* ViewController.swift */; };
 		96BBAC24204DC16500DDE9EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96BBAC22204DC16500DDE9EE /* Main.storyboard */; };
 		96BBAC26204DC16500DDE9EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96BBAC25204DC16500DDE9EE /* Assets.xcassets */; };
 		96BBAC29204DC16500DDE9EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96BBAC27204DC16500DDE9EE /* LaunchScreen.storyboard */; };
 		96BBAC34204DC16500DDE9EE /* SkydiveBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BBAC33204DC16500DDE9EE /* SkydiveBookTests.swift */; };
 		96BBAC3F204DC16500DDE9EE /* SkydiveBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BBAC3E204DC16500DDE9EE /* SkydiveBookUITests.swift */; };
+		96BBAC4D204DC84C00DDE9EE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BBAC4C204DC84C00DDE9EE /* RegisterViewController.swift */; };
+		96BBAC4F204DF54B00DDE9EE /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BBAC4E204DF54B00DDE9EE /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		960B79352059A5CB00690CF8 /* JumpRegistratonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpRegistratonViewController.swift; sourceTree = "<group>"; };
+		962B48E9205F5B5A00476EDE /* ProfilePic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ProfilePic.png; path = Pictures/ProfilePic.png; sourceTree = SOURCE_ROOT; };
+		96A946C920570B3100B564CF /* LogbookIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LogbookIcon.png; path = Pictures/LogbookIcon.png; sourceTree = SOURCE_ROOT; };
+		96A946CA20570B3100B564CF /* WeatherIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WeatherIcon.png; path = Pictures/WeatherIcon.png; sourceTree = SOURCE_ROOT; };
+		96A946CB20570B3100B564CF /* ProfileIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ProfileIcon.png; path = Pictures/ProfileIcon.png; sourceTree = SOURCE_ROOT; };
 		96BBAC1B204DC16500DDE9EE /* SkydiveBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkydiveBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BBAC1E204DC16500DDE9EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96BBAC20204DC16500DDE9EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		96BBAC23204DC16500DDE9EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96BBAC25204DC16500DDE9EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96BBAC28204DC16500DDE9EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +57,8 @@
 		96BBAC3A204DC16500DDE9EE /* SkydiveBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkydiveBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BBAC3E204DC16500DDE9EE /* SkydiveBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkydiveBookUITests.swift; sourceTree = "<group>"; };
 		96BBAC40204DC16500DDE9EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96BBAC4C204DC84C00DDE9EE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		96BBAC4E204DF54B00DDE9EE /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +110,17 @@
 			isa = PBXGroup;
 			children = (
 				96BBAC1E204DC16500DDE9EE /* AppDelegate.swift */,
-				96BBAC20204DC16500DDE9EE /* ViewController.swift */,
+				96BBAC4E204DF54B00DDE9EE /* LogInViewController.swift */,
+				96BBAC4C204DC84C00DDE9EE /* RegisterViewController.swift */,
+				960B79352059A5CB00690CF8 /* JumpRegistratonViewController.swift */,
 				96BBAC22204DC16500DDE9EE /* Main.storyboard */,
-				96BBAC25204DC16500DDE9EE /* Assets.xcassets */,
 				96BBAC27204DC16500DDE9EE /* LaunchScreen.storyboard */,
 				96BBAC2A204DC16500DDE9EE /* Info.plist */,
+				96BBAC25204DC16500DDE9EE /* Assets.xcassets */,
+				96A946C920570B3100B564CF /* LogbookIcon.png */,
+				96A946CB20570B3100B564CF /* ProfileIcon.png */,
+				962B48E9205F5B5A00476EDE /* ProfilePic.png */,
+				96A946CA20570B3100B564CF /* WeatherIcon.png */,
 			);
 			path = SkydiveBook;
 			sourceTree = "<group>";
@@ -232,9 +250,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96A946CC20570B3100B564CF /* LogbookIcon.png in Resources */,
 				96BBAC29204DC16500DDE9EE /* LaunchScreen.storyboard in Resources */,
 				96BBAC26204DC16500DDE9EE /* Assets.xcassets in Resources */,
 				96BBAC24204DC16500DDE9EE /* Main.storyboard in Resources */,
+				962B48EA205F5B5A00476EDE /* ProfilePic.png in Resources */,
+				96A946CE20570B3100B564CF /* ProfileIcon.png in Resources */,
+				96A946CD20570B3100B564CF /* WeatherIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96BBAC21204DC16500DDE9EE /* ViewController.swift in Sources */,
+				96BBAC4F204DF54B00DDE9EE /* LogInViewController.swift in Sources */,
+				960B79362059A5CB00690CF8 /* JumpRegistratonViewController.swift in Sources */,
+				96BBAC4D204DC84C00DDE9EE /* RegisterViewController.swift in Sources */,
 				96BBAC1F204DC16500DDE9EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

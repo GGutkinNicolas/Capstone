@@ -1,0 +1,91 @@
+//
+//  RegisterViewController.swift
+//  SkydiveBook
+//
+//  Created by Guillaume Gutkin-Nicolas on 3/5/18.
+//  Copyright © 2018 Guillaume Gutkin-Nicolas. All rights reserved.
+//
+
+import UIKit
+
+class RegisterViewController: UIViewController {
+    //Link the Txt fields to variables
+    @IBOutlet weak var firstNameTxtField: UITextField!
+    @IBOutlet weak var lastNameTxtField: UITextField!
+    @IBOutlet weak var usernameTxtField: UITextField!
+    @IBOutlet weak var passwordTxtField: UITextField!
+ 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func submitButton(_ sender: AnyObject) {
+        //Initializes variables with what is entered in text fields
+        let firstName = firstNameTxtField.text;
+        let lastName = lastNameTxtField.text;
+        let username = usernameTxtField.text;
+        let password = passwordTxtField.text;
+ 
+        //Store the value into MAMP 
+        let myUrl = URL(string: "http://localhost:8888/registration/userRegister.php");
+        var request = URLRequest(url: myUrl!);
+        request.httpMethod = "POST";
+        
+        //a String of what will be sent to the 'user' table
+        let serverString = "firstName=\(firstName!)&lastName=\(lastName!)&username=\(username!)&password=\(password!)";
+        
+        request.httpBody = serverString.data(using: String.Encoding.utf8);
+        
+
+        let task = URLSession.shared.dataTask(with: request) {
+            data, response, error in
+            //if there's an error print it out
+            if(error != nil) {
+                print("error: \(String(describing: error))");
+                return;
+            }
+            //grab the json messages from the php file
+            let json =  try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! [String:AnyObject];
+            //print out the message
+            if let parseJSON = json {
+                
+                let message = parseJSON["message"] as? String;
+                let status = parseJSON["status"] as? String;
+                print("result: \(status!)");
+                
+                if (status! != "Success") {
+                    DispatchQueue.main.async {
+                        let myMessage = UIAlertController(title: status, message: message, preferredStyle: UIAlertControllerStyle.alert);
+                        
+                        let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default)
+                        {
+                            action in self.dismiss(animated: true, completion: nil);
+                        }
+                        myMessage.addAction(okAction);
+                        self.present(myMessage, animated:true, completion: nil);
+                    }
+                }
+             
+                if let result = status, result == "Success"
+                {
+                    DispatchQueue.main.async {
+                        let myMessage = UIAlertController(title: status, message: message, preferredStyle: UIAlertControllerStyle.alert);
+                        let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default)
+                        {
+                            action in self.dismiss(animated: true, completion: nil);
+                        }
+                        myMessage.addAction(okAction);
+                        self.present(myMessage, animated:true, completion: nil);
+                    }
+                }
+            }
+        }
+        task.resume();
+    }
+}
