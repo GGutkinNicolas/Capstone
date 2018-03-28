@@ -5,8 +5,9 @@
 //  Created by Guillaume Gutkin-Nicolas on 3/5/18.
 //  Copyright © 2018 Guillaume Gutkin-Nicolas. All rights reserved.
 //
+#import <KeychainItemWrapper/KeychainItemWrapper.h>
+import UIKit;
 
-import UIKit
 
 class LogInViewController: UIViewController {
     @IBOutlet weak var usernameTxtField: UITextField!
@@ -22,6 +23,9 @@ class LogInViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    //creates a keychain item
+    //KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil]
+    
     @IBAction func registerButton(_ sender: UIButton) {
          self.performSegue(withIdentifier: "registerView", sender: nil)
     }
