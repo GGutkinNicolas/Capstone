@@ -5,7 +5,14 @@
 //  Created by Guillaume Gutkin-Nicolas on 3/5/18.
 //  Copyright © 2018 Guillaume Gutkin-Nicolas. All rights reserved.
 //
-#import <KeychainItemWrapper/KeychainItemWrapper.h>
+//creates a keychain item
+ //KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil]
+//saves keychain item
+//[keychainItem setObject:@"username you are saving" forKey:kSecAttrAccount];
+//gets keychain item
+//NSString *username = [keychainItem objectForKey:kSecAttrAccount];
+//deletes keychain item for log off button
+//[keychainItem resetKeychainItem];
 import UIKit;
 
 
@@ -23,9 +30,7 @@ class LogInViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    //creates a keychain item
-    //KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil]
-    
+  
     @IBAction func registerButton(_ sender: UIButton) {
          self.performSegue(withIdentifier: "registerView", sender: nil)
     }

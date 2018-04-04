@@ -18,7 +18,8 @@
 		96BBAC4F204DF54B00DDE9EE /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BBAC4E204DF54B00DDE9EE /* LogInViewController.swift */; };
 		96BC8CAA206C39C600CA8F43 /* clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 96BC8CA9206C39C600CA8F43 /* clear.png */; };
 		96BC8CAD206C45B500CA8F43 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BC8CAC206C45B500CA8F43 /* Security.framework */; };
-		96BC8CB2206C46E500CA8F43 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BC8CB1206C46E500CA8F43 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		96C3D47820755FA800B5807B /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C3D47520755EE100B5807B /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		96C3D47C207575C700B5807B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C3D47B207575C700B5807B /* WeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +65,9 @@
 		96BC8CA9206C39C600CA8F43 /* clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clear.png; path = Assets.xcassets/Pictures/clear.png; sourceTree = "<group>"; };
 		96BC8CAC206C45B500CA8F43 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		96BC8CB0206C46E500CA8F43 /* SkydiveBook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SkydiveBook-Bridging-Header.h"; sourceTree = "<group>"; };
-		96BC8CB1206C46E500CA8F43 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = KeychainItemWrapper.m; path = ../KeychainItemWrapper.m; sourceTree = "<group>"; };
-		96BC8CB3206C472D00CA8F43 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		96C3D47420755C8600B5807B /* KeychainItemWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		96C3D47520755EE100B5807B /* KeychainItemWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		96C3D47B207575C700B5807B /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +99,13 @@
 		96BBAC12204DC16400DDE9EE = {
 			isa = PBXGroup;
 			children = (
+				96C3D47520755EE100B5807B /* KeychainItemWrapper.m */,
+				96C3D47420755C8600B5807B /* KeychainItemWrapper.h */,
 				96BBAC1D204DC16500DDE9EE /* SkydiveBook */,
 				96BBAC32204DC16500DDE9EE /* SkydiveBookTests */,
 				96BBAC3D204DC16500DDE9EE /* SkydiveBookUITests */,
 				96BBAC1C204DC16500DDE9EE /* Products */,
 				96BC8CAB206C45B400CA8F43 /* Frameworks */,
-				96BC8CB0206C46E500CA8F43 /* SkydiveBook-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,12 +122,11 @@
 		96BBAC1D204DC16500DDE9EE /* SkydiveBook */ = {
 			isa = PBXGroup;
 			children = (
-				96BC8CB3206C472D00CA8F43 /* KeychainItemWrapper.h */,
-				96BC8CB1206C46E500CA8F43 /* KeychainItemWrapper.m */,
 				96BBAC1E204DC16500DDE9EE /* AppDelegate.swift */,
 				96BBAC4E204DF54B00DDE9EE /* LogInViewController.swift */,
 				96BBAC4C204DC84C00DDE9EE /* RegisterViewController.swift */,
 				960B79352059A5CB00690CF8 /* JumpRegistratonViewController.swift */,
+				96C3D47B207575C700B5807B /* WeatherViewController.swift */,
 				96BBAC22204DC16500DDE9EE /* Main.storyboard */,
 				96BBAC27204DC16500DDE9EE /* LaunchScreen.storyboard */,
 				96BBAC2A204DC16500DDE9EE /* Info.plist */,
@@ -162,6 +164,7 @@
 		96BC8CAB206C45B400CA8F43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96BC8CB0206C46E500CA8F43 /* SkydiveBook-Bridging-Header.h */,
 				96BC8CAC206C45B500CA8F43 /* Security.framework */,
 			);
 			name = Frameworks;
@@ -303,10 +306,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C3D47820755FA800B5807B /* KeychainItemWrapper.m in Sources */,
+				96C3D47C207575C700B5807B /* WeatherViewController.swift in Sources */,
 				96BBAC4F204DF54B00DDE9EE /* LogInViewController.swift in Sources */,
 				960B79362059A5CB00690CF8 /* JumpRegistratonViewController.swift in Sources */,
 				96BBAC4D204DC84C00DDE9EE /* RegisterViewController.swift in Sources */,
-				96BC8CB2206C46E500CA8F43 /* KeychainItemWrapper.m in Sources */,
 				96BBAC1F204DC16500DDE9EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8VEP57WKPY;
 				INFOPLIST_FILE = SkydiveBook/Info.plist;
@@ -492,6 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8VEP57WKPY;
 				INFOPLIST_FILE = SkydiveBook/Info.plist;
