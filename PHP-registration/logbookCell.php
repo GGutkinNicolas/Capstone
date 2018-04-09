@@ -10,8 +10,8 @@
     
     //variables for the values
     $username = $_POST["username"];
-    $returnValue = $dao->getProfileDetails($username);
-  
+    $returnValue = $dao->getJumpList($username);
+    
     //if profileDetails is empty display error message
     if(empty($returnValue))
     {
@@ -25,7 +25,8 @@
     $dao->closeConnection();
     echo json_encode($returnValue);
     
-    ?>
+?>
+
 
 
 

@@ -26,7 +26,7 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func back2Login(_ sender: UIButton) {
-           self.performSegue(withIdentifier: "backToLogin", sender: nil)
+           self.performSegue(withIdentifier: "back2Login", sender: nil)
     }
     
     @IBAction func submitButton(_ sender: UIButton) {
@@ -78,11 +78,11 @@ class RegisterViewController: UIViewController {
                         let myMessage = UIAlertController(title: status, message: message, preferredStyle: UIAlertControllerStyle.alert)
                         let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default)
                         {
-                            action in self.dismiss(animated: true, completion: nil);
-                            self.performSegue(withIdentifier: "backToLogin", sender: nil)
+                             action in self.performSegue(withIdentifier: "back2Login", sender: nil)
                         }
                         myMessage.addAction(okAction)
                         self.present(myMessage, animated:true, completion: nil)
+                        
                     }
                 }
             }

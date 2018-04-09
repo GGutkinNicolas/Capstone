@@ -18,8 +18,10 @@
 		96BBAC4F204DF54B00DDE9EE /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BBAC4E204DF54B00DDE9EE /* LogInViewController.swift */; };
 		96BC8CAA206C39C600CA8F43 /* clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 96BC8CA9206C39C600CA8F43 /* clear.png */; };
 		96BC8CAD206C45B500CA8F43 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BC8CAC206C45B500CA8F43 /* Security.framework */; };
-		96C3D47820755FA800B5807B /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C3D47520755EE100B5807B /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		96C3D47C207575C700B5807B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C3D47B207575C700B5807B /* WeatherViewController.swift */; };
+		96ECB7C3207C1DF2007341A7 /* LogbookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ECB7C2207C1DF2007341A7 /* LogbookTableViewController.swift */; };
+		96ECB7C5207C1E79007341A7 /* LogbookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ECB7C4207C1E79007341A7 /* LogbookTableViewCell.swift */; };
+		96ECB7C7207C1F80007341A7 /* Jumps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ECB7C6207C1F80007341A7 /* Jumps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,10 +66,10 @@
 		96BC8CA8206C390900CA8F43 /* partlyCloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = partlyCloudy.png; path = ../../weatherIcons/partlyCloudy.png; sourceTree = "<group>"; };
 		96BC8CA9206C39C600CA8F43 /* clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clear.png; path = Assets.xcassets/Pictures/clear.png; sourceTree = "<group>"; };
 		96BC8CAC206C45B500CA8F43 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		96BC8CB0206C46E500CA8F43 /* SkydiveBook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SkydiveBook-Bridging-Header.h"; sourceTree = "<group>"; };
-		96C3D47420755C8600B5807B /* KeychainItemWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
-		96C3D47520755EE100B5807B /* KeychainItemWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		96C3D47B207575C700B5807B /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		96ECB7C2207C1DF2007341A7 /* LogbookTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookTableViewController.swift; sourceTree = "<group>"; };
+		96ECB7C4207C1E79007341A7 /* LogbookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookTableViewCell.swift; sourceTree = "<group>"; };
+		96ECB7C6207C1F80007341A7 /* Jumps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jumps.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +101,6 @@
 		96BBAC12204DC16400DDE9EE = {
 			isa = PBXGroup;
 			children = (
-				96C3D47520755EE100B5807B /* KeychainItemWrapper.m */,
-				96C3D47420755C8600B5807B /* KeychainItemWrapper.h */,
 				96BBAC1D204DC16500DDE9EE /* SkydiveBook */,
 				96BBAC32204DC16500DDE9EE /* SkydiveBookTests */,
 				96BBAC3D204DC16500DDE9EE /* SkydiveBookUITests */,
@@ -128,6 +128,9 @@
 				960B79352059A5CB00690CF8 /* JumpRegistratonViewController.swift */,
 				96C3D47B207575C700B5807B /* WeatherViewController.swift */,
 				96BBAC22204DC16500DDE9EE /* Main.storyboard */,
+				96ECB7C2207C1DF2007341A7 /* LogbookTableViewController.swift */,
+				96ECB7C6207C1F80007341A7 /* Jumps.swift */,
+				96ECB7C4207C1E79007341A7 /* LogbookTableViewCell.swift */,
 				96BBAC27204DC16500DDE9EE /* LaunchScreen.storyboard */,
 				96BBAC2A204DC16500DDE9EE /* Info.plist */,
 				96BBAC25204DC16500DDE9EE /* Assets.xcassets */,
@@ -164,7 +167,6 @@
 		96BC8CAB206C45B400CA8F43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				96BC8CB0206C46E500CA8F43 /* SkydiveBook-Bridging-Header.h */,
 				96BC8CAC206C45B500CA8F43 /* Security.framework */,
 			);
 			name = Frameworks;
@@ -306,11 +308,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96C3D47820755FA800B5807B /* KeychainItemWrapper.m in Sources */,
 				96C3D47C207575C700B5807B /* WeatherViewController.swift in Sources */,
 				96BBAC4F204DF54B00DDE9EE /* LogInViewController.swift in Sources */,
+				96ECB7C3207C1DF2007341A7 /* LogbookTableViewController.swift in Sources */,
 				960B79362059A5CB00690CF8 /* JumpRegistratonViewController.swift in Sources */,
 				96BBAC4D204DC84C00DDE9EE /* RegisterViewController.swift in Sources */,
+				96ECB7C7207C1F80007341A7 /* Jumps.swift in Sources */,
+				96ECB7C5207C1E79007341A7 /* LogbookTableViewCell.swift in Sources */,
 				96BBAC1F204DC16500DDE9EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,8 +489,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AppState.SkydiveBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SkydiveBook-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -504,7 +510,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AppState.SkydiveBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SkydiveBook-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

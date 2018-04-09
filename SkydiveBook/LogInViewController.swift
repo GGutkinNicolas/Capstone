@@ -5,8 +5,9 @@
 //  Created by Guillaume Gutkin-Nicolas on 3/5/18.
 //  Copyright © 2018 Guillaume Gutkin-Nicolas. All rights reserved.
 //
+//import SkydiveBook-Bridging-Header
 //creates a keychain item
- //KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil]
+//let KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil]
 //saves keychain item
 //[keychainItem setObject:@"username you are saving" forKey:kSecAttrAccount];
 //gets keychain item
@@ -76,6 +77,8 @@ class LogInViewController: UIViewController {
                     
                 else
                 {
+                    let defaults = UserDefaults.standard
+                    defaults.set(username, forKey: "userNameKey")
                     DispatchQueue.main.async {
                         let myMessage = UIAlertController(title: status, message: message, preferredStyle: UIAlertControllerStyle.alert)
                         let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default)

@@ -61,24 +61,25 @@
         //creates a new row in the 'jumpLog' Table and adds the information
         public function registerJump($username, $jumpNum, $jumpType, $date, $location, $aircraft,
                                      $rig, $canopy, $exitAlt, $depAlt, $sWind, $dTarget, $wingsuit, $cutaway) {
-            $sql = "INSERT INTO `jumpLog` (`username`, `jumpNum`, `jumpType`, `day`, `location`, `aircraft`, `rig`, `canopy`, `exitAlt`, `depAlt`, `sWind`, `dTarget`, `wingsuit`, `cutaway`) VALUES ('$username', '$jumpNum', '$jumpType', '$date', '$location', '$aircraft', '$rig', '$canopy', '$exitAlt', '$depAlt', '$sWind', '$dTarget', '$wingsuit', '$cutaway')";
+            $sql = "INSERT INTO `jumpLog` (`username`, `jumpNum`, `jumpType`, `date`, `location`, `aircraft`, `rig`, `canopy`, `exitAlt`, `depAlt`, `sWind`, `dTarget`, `wingsuit`, `cutaway`) VALUES ('$username', '$jumpNum', '$jumpType', '$date', '$location', '$aircraft', '$rig', '$canopy', '$exitAlt', '$depAlt', '$sWind', '$dTarget', '$wingsuit', '$cutaway')";
             $result = $this->conn->query($sql);
             return $result;
         }
 
         //creates the information to be displayed by the profile
+        //Under Construction
         public function getProfileDetails($username) {
             $returnValue = array();
-            
-            $tJumps = getTotalJumps($username);
-            $tSport = getTotalSportJumps($username);
-            $tBase = getTotalBaseJumps($username);
-            $tTandem = getTotalTandemJumps($username);
-            $tStudent = getTotalStudentJumps($username);
-            $tCutaway = getTotalCutaway($username);
-            $tWingsuit = getTotalWingsuit($username);
-            $tFFD = getTotalFFD($username);
-            $tFFT = getTotalFFT($username);
+            $returnValue["tJumps"] = getTotalJumps($username);
+            $returnValue["tSport"] = getTotalSportJumps($username);
+            $returnValue["tBase"] = getTotalBaseJumps($username);
+            $returnValue["tTandem"] = getTotalTandemJumps($username);
+            $returnValue["tStudent"] = getTotalStudentJumps($username);
+            $returnValue["tCutaway"] = getTotalCutaway($username);
+            $returnValue["tWingsuit"] = getTotalWingsuit($username);
+            $returnValue["tFFD"] = getTotalFFD($username);
+            $returnValue["tFFT"] = getTotalFFT($username);
+            return $returnValue;
         }
         
         //gets Total Jumps
@@ -138,10 +139,10 @@
             $totalRJ = getTotalRJ($username);
             //handles the first 1000 feet
             $fTime = $totalRJ * 12;
-            $FFD = $FFD - ($totalRJ * 1000)
+            $FFD = $FFD - ($totalRJ * 1000);
             //handles the remaining 1000 feet
-            $result = $fTime + (($FFD / 1000) * 6)
-            return $result
+            $result = $fTime + (($FFD / 1000) * 6);
+            return $result;
         }
         //get Total Registered Jumps
         public function getTotalRJ($username) {
@@ -149,6 +150,21 @@
             $result = $this->conn->query($sql);
             return $result;
         }
+        //returns jump info
+        public function getJumpList($username) {
+            $returnValue = array();
+            $sql = "SELECT * FROM jumpLog WHERE username = '".$username."'";
+            $result = $this->conn->query($sql);
+            
+            if($result != null && (mysqli_num_rows($result) >= 1)) {
+                $row = $result->fetch_array(MYSQLI_ASSOC);
+                if(!empty($row)) {
+                    $returnValue = $row;
+                }
+            }
+            return $returnValue;
+        }
+        
         
     }
 

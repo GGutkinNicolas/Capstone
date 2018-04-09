@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -221,10 +221,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="logbookRow" id="bXD-nh-Pac">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="logbookRow" id="bXD-nh-Pac" customClass="LogbookTableViewCell" customModule="SkydiveBook" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bXD-nh-Pac" id="BaR-N3-flR">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bXD-nh-Pac" id="BaR-N3-flR" customClass="LogbookTableViewCell" customModule="SkydiveBook" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -251,6 +251,14 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="Date" destination="kbO-no-XXM" id="hfh-tb-uUR"/>
+                                    <outlet property="JumpNum" destination="LKm-kp-0EW" id="yuL-PE-QpH"/>
+                                    <outlet property="Location" destination="pWa-Nk-nJI" id="qAf-Z7-qO4"/>
+                                    <outlet property="date" destination="kbO-no-XXM" id="dry-0v-7tx"/>
+                                    <outlet property="jumpNum" destination="LKm-kp-0EW" id="ra3-88-sPl"/>
+                                    <outlet property="location" destination="pWa-Nk-nJI" id="UzC-j7-kAK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -369,7 +377,7 @@
                         <outlet property="lastNameTxtField" destination="xcA-5c-Nw8" id="4Zl-EV-wRK"/>
                         <outlet property="passwordTxtField" destination="nmF-rS-3bF" id="tzc-E3-UsZ"/>
                         <outlet property="usernameTxtField" destination="gkJ-lA-hip" id="I2f-p5-MLN"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="backToLogin" id="e5Q-qh-0HZ"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="back2Login" id="e5Q-qh-0HZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qq2-M3-T7q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -411,6 +419,9 @@
                         <viewLayoutGuide key="safeArea" id="Fa0-ZB-Lo2"/>
                     </view>
                     <navigationItem key="navigationItem" title="Weather" id="8Po-UN-2fb"/>
+                    <connections>
+                        <outlet property="searchBar" destination="scV-WJ-n96" id="TYY-bY-REg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VO9-m9-ihm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -700,11 +711,12 @@
                         <outlet property="rigTxtField" destination="MhW-GP-hJM" id="YA4-oS-3jG"/>
                         <outlet property="sWindTxtField" destination="kla-Un-lR5" id="Kt3-NH-7jS"/>
                         <outlet property="wingsuitSwitch" destination="8Sm-ma-m2F" id="Erm-8P-6fv"/>
+                        <segue destination="8ba-BF-ogB" kind="presentation" identifier="back2Logbook" id="6Bx-R6-Qb0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ZD-UD-B3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2472.8000000000002" y="128.57142857142858"/>
+            <point key="canvasLocation" x="2564" y="-245"/>
         </scene>
         <!--Weather-->
         <scene sceneID="CjP-um-JT5">
@@ -771,6 +783,8 @@
         <image name="WeatherIcon" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nWp-LD-YpK"/>
+        <segue reference="ZXC-cY-IHz"/>
+        <segue reference="6Bx-R6-Qb0"/>
+        <segue reference="e5Q-qh-0HZ"/>
     </inferredMetricsTieBreakers>
 </document>

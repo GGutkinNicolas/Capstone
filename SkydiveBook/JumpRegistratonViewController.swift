@@ -85,13 +85,16 @@ class JumpRegistratonViewController: UIViewController, UIPickerViewDataSource, U
         let wingsuit = wingsuitSwitch.isOn
         let cutaway = cutawaySwitch.isOn
         
+        let defaults = UserDefaults.standard
+        let username = defaults.string(forKey: "userNameKey")
+        //print(username!)
         //Store the value into MAMP
         let myUrl = URL(string: "http://localhost:8888/registration/jumpRegister.php")
         var request = URLRequest(url: myUrl!)
         request.httpMethod = "POST"
         
         //a String of what will be sent to the 'jumpLog' table
-        let serverString = "jumpNum=\(jumpNum!)&jumpType=\(jumpType!)&date=\(date!)&location=\(location!)&aircraft=\(aircraft!)&rig=\(rig!)&canopy=\(canopy!)&exitAlt=\(exitAlt!)&depAlt=\(depAlt!)&sWind=\(sWind!)&dTarget=\(dTarget!)&wingsuit=\(wingsuit)&cutaway=\(cutaway)"
+        let serverString = "username=\(username!)&jumpNum=\(jumpNum!)&jumpType=\(jumpType!)&date=\(date!)&location=\(location!)&aircraft=\(aircraft!)&rig=\(rig!)&canopy=\(canopy!)&exitAlt=\(exitAlt!)&depAlt=\(depAlt!)&sWind=\(sWind!)&dTarget=\(dTarget!)&wingsuit=\(wingsuit)&cutaway=\(cutaway)"
         
         request.httpBody = serverString.data(using: String.Encoding.utf8)
         
@@ -108,24 +111,25 @@ class JumpRegistratonViewController: UIViewController, UIPickerViewDataSource, U
             if let parseJSON = json {
                 
                 let message = parseJSON["message"] as? String
+                let status = parseJSON["status"] as? String
                 print("result: \(message!)")
                 
-                if (message! != "Success") {
+                if (status! != "Success") {
                     DispatchQueue.main.async {
-                        let myMessage = UIAlertController(title: "Warning:", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                        let myMessage = UIAlertController(title: status, message: message, preferredStyle: UIAlertControllerStyle.alert)
                         let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default)
                         myMessage.addAction(okAction)
                         self.present(myMessage, animated:true, completion: nil)
                     }
                 }
-                
+                    
                 else
                 {
                     DispatchQueue.main.async {
-                        let myMessage = UIAlertController(title: "Congratulations:", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                        let myMessage = UIAlertController(title: status, message: message, preferredStyle: UIAlertControllerStyle.alert)
                         let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default)
                         {
-                            action in self.dismiss(animated: true, completion: nil)
+                           action in self.performSegue(withIdentifier: "back2Logbook", sender: nil)
                         }
                         myMessage.addAction(okAction)
                         self.present(myMessage, animated:true, completion: nil)
