@@ -1028,7 +1028,6 @@
         <image name="WeatherIcon" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uya-7h-HOG"/>
         <segue reference="6Bx-R6-Qb0"/>
         <segue reference="nWp-LD-YpK"/>
     </inferredMetricsTieBreakers>

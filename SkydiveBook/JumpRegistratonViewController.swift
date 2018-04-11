@@ -1,7 +1,14 @@
-
+//
+//  JumpRegisterationViewController.swift
+//  SkydiveBook
+//
+//  Created by Guillaume Gutkin-Nicolas on 3/5/18.
+//  Copyright © 2018 Guillaume Gutkin-Nicolas. All rights reserved.
+//
 import UIKit
 
 class JumpRegistratonViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    //Link the text fields to variables
     @IBOutlet weak var jumpNumTxtField: UITextField!
     @IBOutlet weak var jumpTypeTxtField: UITextField!
     @IBOutlet weak var dateTxtField: UITextField!
@@ -19,7 +26,8 @@ class JumpRegistratonViewController: UIViewController, UIPickerViewDataSource, U
     //Takes care of turning jumpType into a Picker View
     var jumptypes = ["Student", "Tandem", "Sport", "B.A.S.E"]
     var picker = UIPickerView()
-  
+    
+    //required methods for picker view
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -36,19 +44,18 @@ class JumpRegistratonViewController: UIViewController, UIPickerViewDataSource, U
     //Takes care of turning date into a DatePicker View
     let datePicker = UIDatePicker()
     
+    //function to create a DatePicker
     func createDatePicker() {
         datePicker.datePickerMode = .date
-        
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
-        
         let done = UIBarButtonItem(barButtonSystemItem: .done, target:nil, action: #selector(donePressed))
         toolbar.setItems([done], animated: false)
-        
         dateTxtField.inputAccessoryView = toolbar
         dateTxtField.inputView = datePicker
     }
     
+    //done button for the DatePicker View
     @objc func donePressed() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
@@ -60,6 +67,7 @@ class JumpRegistratonViewController: UIViewController, UIPickerViewDataSource, U
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
         picker.delegate = self
         picker.dataSource = self
         jumpTypeTxtField.inputView = picker
@@ -71,7 +79,10 @@ class JumpRegistratonViewController: UIViewController, UIPickerViewDataSource, U
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //Action for Submit Button
     @IBAction func submitButton(_ sender: Any) {
+        //Initializes variables with what is entered in text fields
         let jumpNum = jumpNumTxtField.text
         let jumpType = jumpTypeTxtField.text
         let date = dateTxtField.text
@@ -86,9 +97,10 @@ class JumpRegistratonViewController: UIViewController, UIPickerViewDataSource, U
         let wingsuit = wingsuitSwitch.isOn
         let cutaway = cutawaySwitch.isOn
         
+        //gets username from the current session user
         let defaults = UserDefaults.standard
         let username = defaults.string(forKey: "userNameKey")
-        //print(username!)
+        
         //Store the value into MAMP
         let myUrl = URL(string: "http://localhost:8888/registration/jumpRegister.php")
         var request = URLRequest(url: myUrl!)
@@ -98,7 +110,6 @@ class JumpRegistratonViewController: UIViewController, UIPickerViewDataSource, U
         let serverString = "username=\(username!)&jumpNum=\(jumpNum!)&jumpType=\(jumpType!)&date=\(date!)&location=\(location!)&aircraft=\(aircraft!)&rig=\(rig!)&canopy=\(canopy!)&exitAlt=\(exitAlt!)&depAlt=\(depAlt!)&sWind=\(sWind!)&dTarget=\(dTarget!)&wingsuit=\(wingsuit)&cutaway=\(cutaway)"
         
         request.httpBody = serverString.data(using: String.Encoding.utf8)
-        
         let task = URLSession.shared.dataTask(with: request) {
             data, response, error in
             //if there's an error print it out
@@ -115,6 +126,7 @@ class JumpRegistratonViewController: UIViewController, UIPickerViewDataSource, U
                 let status = parseJSON["status"] as? String
                 print("result: \(message!)")
                 
+                //if Error message pops up why
                 if (status! != "Success:") {
                     DispatchQueue.main.async {
                         let myMessage = UIAlertController(title: status, message: message, preferredStyle: UIAlertControllerStyle.alert)
@@ -123,7 +135,8 @@ class JumpRegistratonViewController: UIViewController, UIPickerViewDataSource, U
                         self.present(myMessage, animated:true, completion: nil)
                     }
                 }
-                    
+                   
+                //else Success message pops up
                 else
                 {
                     DispatchQueue.main.async {

@@ -5,11 +5,10 @@
 //  Created by Guillaume Gutkin-Nicolas on 3/5/18.
 //  Copyright © 2018 Guillaume Gutkin-Nicolas. All rights reserved.
 //
-
 import UIKit
 
 class RegisterViewController: UIViewController {
-    //Link the Txt fields to variables
+    //Link the text fields to variables
     @IBOutlet weak var firstNameTxtField: UITextField!
     @IBOutlet weak var lastNameTxtField: UITextField!
     @IBOutlet weak var usernameTxtField: UITextField!
@@ -25,10 +24,12 @@ class RegisterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //Segue to Login Page
     @IBAction func back2Login(_ sender: UIButton) {
            self.performSegue(withIdentifier: "back2Login", sender: nil)
     }
     
+    //Action for Submit Button
     @IBAction func submitButton(_ sender: UIButton) {
         //Initializes variables with what is entered in text fields
         let firstName = firstNameTxtField.text
@@ -45,8 +46,6 @@ class RegisterViewController: UIViewController {
         let serverString = "firstName=\(firstName!)&lastName=\(lastName!)&username=\(username!)&password=\(password!)"
         
         request.httpBody = serverString.data(using: String.Encoding.utf8)
-        
-
         let task = URLSession.shared.dataTask(with: request) {
             data, response, error in
             //if there's an error print it out
@@ -63,6 +62,7 @@ class RegisterViewController: UIViewController {
                 let status = parseJSON["status"] as? String
                 print("result: \(status!)")
                 
+                //if Error message pops up why
                 if (status! != "Success:") {
                     DispatchQueue.main.async {
                         let myMessage = UIAlertController(title: status, message: message, preferredStyle: UIAlertControllerStyle.alert)
@@ -72,6 +72,7 @@ class RegisterViewController: UIViewController {
                     }
                 }
              
+                //else Success message pops up
                 else
                 {
                     DispatchQueue.main.async {

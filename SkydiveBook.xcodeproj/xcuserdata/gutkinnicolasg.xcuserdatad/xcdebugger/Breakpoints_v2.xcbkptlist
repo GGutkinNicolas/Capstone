@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SkydiveBook/JumpRegistratonViewController.swift"
-            timestampString = "545170877.496151"
+            timestampString = "545174740.961809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "5"
-            endingLineNumber = "5"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
             landmarkName = "JumpRegistratonViewController"
             landmarkType = "3">
          </BreakpointContent>
