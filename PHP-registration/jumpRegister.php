@@ -59,7 +59,7 @@
     //$returnValue["message"] = $msg;
     if($result)
     {
-        $returnValue["status"] = "Success";
+        $returnValue["status"] = "Success:";
         $returnValue["message"] = "Your jump has been registered.";
     }
     //close connection

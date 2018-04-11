@@ -10,7 +10,7 @@ import UIKit
 
 class LogbookTableViewController: UITableViewController {
     
-    var jumps = [Jumps]()
+    //var jumps = [Jumps]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,12 +38,12 @@ class LogbookTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
-    
+    /*
     private func loadJumps() {
         let defaults = UserDefaults.standard
         let username = defaults.string(forKey: "userNameKey")
         
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 

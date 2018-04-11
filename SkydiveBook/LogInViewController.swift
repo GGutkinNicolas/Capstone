@@ -5,15 +5,7 @@
 //  Created by Guillaume Gutkin-Nicolas on 3/5/18.
 //  Copyright © 2018 Guillaume Gutkin-Nicolas. All rights reserved.
 //
-//import SkydiveBook-Bridging-Header
-//creates a keychain item
-//let KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil]
-//saves keychain item
-//[keychainItem setObject:@"username you are saving" forKey:kSecAttrAccount];
-//gets keychain item
-//NSString *username = [keychainItem objectForKey:kSecAttrAccount];
-//deletes keychain item for log off button
-//[keychainItem resetKeychainItem];
+
 import UIKit;
 
 
@@ -66,7 +58,7 @@ class LogInViewController: UIViewController {
                 let status = parseJSON["status"] as? String
                 print("result: \(status!)");
                 
-                if (status! != "Success") {
+                if (status! != "Success:") {
                     DispatchQueue.main.async {
                         let myMessage = UIAlertController(title: status, message: message, preferredStyle: UIAlertControllerStyle.alert)
                         let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default)

@@ -22,6 +22,7 @@
 		96ECB7C3207C1DF2007341A7 /* LogbookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ECB7C2207C1DF2007341A7 /* LogbookTableViewController.swift */; };
 		96ECB7C5207C1E79007341A7 /* LogbookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ECB7C4207C1E79007341A7 /* LogbookTableViewCell.swift */; };
 		96ECB7C7207C1F80007341A7 /* Jumps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ECB7C6207C1F80007341A7 /* Jumps.swift */; };
+		96ED6C56207E92260054F00F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ED6C55207E92260054F00F /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		96ECB7C2207C1DF2007341A7 /* LogbookTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookTableViewController.swift; sourceTree = "<group>"; };
 		96ECB7C4207C1E79007341A7 /* LogbookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookTableViewCell.swift; sourceTree = "<group>"; };
 		96ECB7C6207C1F80007341A7 /* Jumps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jumps.swift; sourceTree = "<group>"; };
+		96ED6C55207E92260054F00F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				960B79352059A5CB00690CF8 /* JumpRegistratonViewController.swift */,
 				96C3D47B207575C700B5807B /* WeatherViewController.swift */,
 				96BBAC22204DC16500DDE9EE /* Main.storyboard */,
+				96ED6C55207E92260054F00F /* ProfileViewController.swift */,
 				96ECB7C2207C1DF2007341A7 /* LogbookTableViewController.swift */,
 				96ECB7C6207C1F80007341A7 /* Jumps.swift */,
 				96ECB7C4207C1E79007341A7 /* LogbookTableViewCell.swift */,
@@ -235,7 +238,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Guillaume Gutkin-Nicolas";
 				TargetAttributes = {
 					96BBAC1A204DC16500DDE9EE = {
@@ -314,6 +317,7 @@
 				960B79362059A5CB00690CF8 /* JumpRegistratonViewController.swift in Sources */,
 				96BBAC4D204DC84C00DDE9EE /* RegisterViewController.swift in Sources */,
 				96ECB7C7207C1F80007341A7 /* Jumps.swift in Sources */,
+				96ED6C56207E92260054F00F /* ProfileViewController.swift in Sources */,
 				96ECB7C5207C1E79007341A7 /* LogbookTableViewCell.swift in Sources */,
 				96BBAC1F204DC16500DDE9EE /* AppDelegate.swift in Sources */,
 			);
@@ -384,6 +388,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -391,6 +396,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -441,6 +447,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -448,6 +455,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -483,6 +491,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8VEP57WKPY;
 				INFOPLIST_FILE = SkydiveBook/Info.plist;
@@ -504,6 +513,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8VEP57WKPY;
 				INFOPLIST_FILE = SkydiveBook/Info.plist;

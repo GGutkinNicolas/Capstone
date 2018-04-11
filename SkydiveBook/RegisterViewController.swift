@@ -63,7 +63,7 @@ class RegisterViewController: UIViewController {
                 let status = parseJSON["status"] as? String
                 print("result: \(status!)")
                 
-                if (status! != "Success") {
+                if (status! != "Success:") {
                     DispatchQueue.main.async {
                         let myMessage = UIAlertController(title: status, message: message, preferredStyle: UIAlertControllerStyle.alert)
                         let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default)

@@ -64,6 +64,7 @@ class JumpRegistratonViewController: UIViewController, UIPickerViewDataSource, U
         picker.dataSource = self
         jumpTypeTxtField.inputView = picker
         createDatePicker()
+        self.navigationItem.title = "Jump Registration"
     }
     
     override func didReceiveMemoryWarning() {
@@ -114,7 +115,7 @@ class JumpRegistratonViewController: UIViewController, UIPickerViewDataSource, U
                 let status = parseJSON["status"] as? String
                 print("result: \(message!)")
                 
-                if (status! != "Success") {
+                if (status! != "Success:") {
                     DispatchQueue.main.async {
                         let myMessage = UIAlertController(title: status, message: message, preferredStyle: UIAlertControllerStyle.alert)
                         let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default)

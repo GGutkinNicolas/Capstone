@@ -5,7 +5,7 @@
 //  Created by Guillaume Gutkin-Nicolas on 4/9/18.
 //  Copyright © 2018 Guillaume Gutkin-Nicolas. All rights reserved.
 //
-
+/*
 import Foundation
 
 class Jumps {
@@ -88,3 +88,4 @@ class Jumps {
     
     }
 }
+*/

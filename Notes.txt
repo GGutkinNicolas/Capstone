@@ -8,7 +8,7 @@ Metadata Section:
 
 Project Overview:
 	-The project will replace the current physical logbooks handed out at dropzones
-		-Make it more protable
+		-Make it more portable
 		-One less thing to think about
 	-Features
 		-User Login and Registration
@@ -30,9 +30,8 @@ Technology:
 	-Developed on a MacBook Pro
 	-Used Xcode as my editor
 	-Coded in Swift, PHP, mySQL
-	-used KeyChain to authenticate the users
 	-used MAMP as a local server for database
-	-Apple's KeychainItemWrapper files. (To make this an app on the store I must acquire a license from Apple)
+	
 
 Risk Areas:
 	-I don't have much experience with anything that I'm trying to implement

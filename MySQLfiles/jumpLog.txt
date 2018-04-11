@@ -11,8 +11,8 @@ CREATE TABLE jumpLog (
 	depAlt int(5) NOT NULL,
 	sWind int(2) NOT NULL,
 	dTarget int(6) NOT NULL,
-	wingsuit varchar(3) NOT NULL,
-	cutaway varchar(3) NOT NULL,
+	wingsuit varchar(5) NOT NULL,
+	cutaway varchar(5) NOT NULL,
 	FOREIGN KEY (username) REFERENCES users(username)
 );
 
