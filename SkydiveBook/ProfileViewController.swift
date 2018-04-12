@@ -5,7 +5,6 @@
 //  Created by Guillaume Gutkin-Nicolas on 4/11/18.
 //  Copyright © 2018 Guillaume Gutkin-Nicolas. All rights reserved.
 //
-
 import UIKit
 
 class ProfileViewController: UIViewController {

@@ -5,7 +5,7 @@
 //  Created by Guillaume Gutkin-Nicolas on 4/9/18.
 //  Copyright © 2018 Guillaume Gutkin-Nicolas. All rights reserved.
 //
-/*
+
 import Foundation
 
 class Jumps {
@@ -57,35 +57,5 @@ class Jumps {
         self.cutaway = cutaway
     }
     
-    static func loadJumps(username: String) {
-        //Store the value into MAMP
-        let myUrl = URL(string: "http://localhost:8888/registration/logbookCell.php")
-        var request = URLRequest(url: myUrl!)
-        request.httpMethod = "POST"
-        
-        //a String of what will be sent to the 'user' table
-        let serverString = "username=\(username)"
-        
-        request.httpBody = serverString.data(using: String.Encoding.utf8)
-        var jumps: [Jumps] = []
-        
-        let task = URLSession.shared.dataTask(with: request) {
-            data, response, error in
-            //if there's an error print it out
-            if(error != nil) {
-                print("error: \(String(describing: error))")
-                return
-            }
-            //grab the json messages from the php file
-            if let json =  try? JSONSerialization.jsonObject(with: data!, options: []) as? [String:Any] {
-            //print out the message
-                for case let result in json! {
-                    jumps.append(Jumps(json: result))
-                }
-            }
-        }
-        task.resume()
-    
-    }
 }
-*/
+

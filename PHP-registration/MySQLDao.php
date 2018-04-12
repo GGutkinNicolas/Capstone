@@ -70,6 +70,7 @@
         //Under Construction
         public function getProfileDetails($username) {
             $returnValue = array();
+            $returnValue["name"] = getFullName($username);
             $returnValue["tJumps"] = getTotalJumps($username);
             $returnValue["tSport"] = getTotalSportJumps($username);
             $returnValue["tBase"] = getTotalBaseJumps($username);
@@ -81,7 +82,12 @@
             $returnValue["tFFT"] = getTotalFFT($username);
             return $returnValue;
         }
-        
+        //getsFullName
+        public function getsFullName($username) {
+            $sql = "SELECT fname, lname FROM jumpLog WHERE username = '".$username."'";
+            $result = $this->conn->query($sql);
+            return $result;
+        }
         //gets Total Jumps
         public function getTotalJumps($username) {
             $sql = "SELECT MAX(jumpNum) FROM jumpLog WHERE username = '".$username."'";
@@ -114,13 +120,13 @@
         }
         //gets Total Cutaways
         public function getTotalCutaway($username) {
-            $sql = "SELECT COUNT(cutaway) FROM jumpLog WHERE cutaway = yes AND username = '".$username."'";
+            $sql = "SELECT COUNT(cutaway) FROM jumpLog WHERE cutaway = true AND username = '".$username."'";
             $result = $this->conn->query($sql);
             return $result;
         }
         //gets Total Wingsuit
         public function getTotalWingsuit($username) {
-            $sql = "SELECT COUNT(wingsuit) FROM jumpLog WHERE wingsuit = yes AND username = '".$username."'";
+            $sql = "SELECT COUNT(wingsuit) FROM jumpLog WHERE wingsuit = true AND username = '".$username."'";
             $result = $this->conn->query($sql);
             return $result;
         }
@@ -155,13 +161,11 @@
             $returnValue = array();
             $sql = "SELECT * FROM jumpLog WHERE username = '".$username."'";
             $result = $this->conn->query($sql);
-            
-            if($result != null && (mysqli_num_rows($result) >= 1)) {
+            $returnValue = mysqli_fetch_all ($result, MYSQLI_ASSOC);
+            /*if($result != null && (mysqli_num_rows($result) >= 1)) {
                 $row = $result->fetch_array(MYSQLI_ASSOC);
-                if(!empty($row)) {
-                    $returnValue = $row;
-                }
-            }
+                $returnValue[] = $row;
+            }*/
             return $returnValue;
         }
         

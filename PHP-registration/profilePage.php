@@ -19,7 +19,7 @@
         $returnValue["message"] = "We apologize something went wrong on our end.";
     }
     else {
-        $returnValue["status"] = "Success";
+        $returnValue["status"] = "Success:";
     }
     //close connection
     $dao->closeConnection();

@@ -41,7 +41,7 @@
         /*
         $returnValue["username"] = $userDetails["username"];
         */
-        $returnValue["status"] = "Success";
+        $returnValue["status"] = "Success:";
         $returnValue["message"] = "You are successfully logged in.";
     }
     //close connection
