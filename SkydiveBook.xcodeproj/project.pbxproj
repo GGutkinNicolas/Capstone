@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		960B79362059A5CB00690CF8 /* JumpRegistratonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960B79352059A5CB00690CF8 /* JumpRegistratonViewController.swift */; };
+		96740D152082792C00F1B83D /* Sky.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 96740D142082792B00F1B83D /* Sky.jpeg */; };
 		96BBAC1F204DC16500DDE9EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BBAC1E204DC16500DDE9EE /* AppDelegate.swift */; };
 		96BBAC24204DC16500DDE9EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96BBAC22204DC16500DDE9EE /* Main.storyboard */; };
 		96BBAC26204DC16500DDE9EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96BBAC25204DC16500DDE9EE /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		960B79352059A5CB00690CF8 /* JumpRegistratonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpRegistratonViewController.swift; sourceTree = "<group>"; };
+		96740D142082792B00F1B83D /* Sky.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Sky.jpeg; path = Assets.xcassets/Pictures/Sky.jpeg; sourceTree = "<group>"; };
 		96BBAC1B204DC16500DDE9EE /* SkydiveBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkydiveBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BBAC1E204DC16500DDE9EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96BBAC23204DC16500DDE9EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				96BBAC27204DC16500DDE9EE /* LaunchScreen.storyboard */,
 				96BBAC2A204DC16500DDE9EE /* Info.plist */,
 				96BBAC25204DC16500DDE9EE /* Assets.xcassets */,
+				96740D142082792B00F1B83D /* Sky.jpeg */,
 				96BC8CA9206C39C600CA8F43 /* clear.png */,
 				96BC8CA0206C38A600CA8F43 /* cloudy.png */,
 				96BC8CA4206C38A600CA8F43 /* night.png */,
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96BBAC29204DC16500DDE9EE /* LaunchScreen.storyboard in Resources */,
+				96740D152082792C00F1B83D /* Sky.jpeg in Resources */,
 				96BBAC26204DC16500DDE9EE /* Assets.xcassets in Resources */,
 				96BBAC24204DC16500DDE9EE /* Main.storyboard in Resources */,
 				96BC8CAA206C39C600CA8F43 /* clear.png in Resources */,

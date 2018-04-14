@@ -15,14 +15,14 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Sky.jpeg")!)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     //Segue to Register Page
     @IBAction func registerButton(_ sender: UIButton) {
          self.performSegue(withIdentifier: "registerView", sender: nil)

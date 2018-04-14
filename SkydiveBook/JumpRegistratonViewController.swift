@@ -73,7 +73,6 @@ class JumpRegistratonViewController: UIViewController, UIPickerViewDataSource, U
         jumpTypeTxtField.inputView = picker
         createDatePicker()
         self.navigationItem.title = "Jump Registration"
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "")!)
     }
     
     override func didReceiveMemoryWarning() {
