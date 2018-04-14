@@ -18,6 +18,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "")!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -96,7 +97,6 @@ class RegisterViewController: UIViewController {
                             }
                             myMessage.addAction(okAction)
                             self.present(myMessage, animated:true, completion: nil)
-                            
                         }
                     }
                 }

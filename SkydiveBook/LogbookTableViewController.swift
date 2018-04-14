@@ -64,26 +64,22 @@ class LogbookTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return jumps.count
     }
-
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "LogbookTableViewCell"
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? LogbookTableViewCell  else {
                 fatalError("The dequeued cell is not an instance of logbooktableviewcell.")
             }
         let jump = jumps[indexPath.row]
+        // Configure the cell...
         cell.date.text = jump.date
         cell.jumpNum.text = jump.jumpNum
         cell.location.text = jump.location
-        // Configure the cell...
-
         return cell
     }
 

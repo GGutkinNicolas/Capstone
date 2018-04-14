@@ -23,15 +23,19 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "")!)
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadData()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated);
+    func loadData() {
         
         let defaults = UserDefaults.standard
         let username = defaults.string(forKey: "userNameKey")
@@ -51,14 +55,13 @@ class ProfileViewController: UIViewController {
                 return
             }
             //grab the json messages from the php file
-            let json =  try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! [String:AnyObject]
+            let json =  try? JSONSerialization.jsonObject(with: data!, options: []) as! [String:AnyObject]
             //print out the message
             if let parseJSON = json {
                 
                 let message = parseJSON["message"] as? String
                 let status = parseJSON["status"] as? String
-                
-                print("result: \(message!)")
+                print("result: \(status!)")
                 
                 if (status! != "Success:") {
                     DispatchQueue.main.async {
@@ -71,16 +74,20 @@ class ProfileViewController: UIViewController {
                     
                 else
                 {
-                    self.name.text = parseJSON["name"] as? String
-                    self.tJumps.text = parseJSON["tJumps"] as? String
-                    self.tSport.text = parseJSON["tSport"] as? String
-                    self.tBase.text = parseJSON["tBase"] as? String
-                    self.tTandem.text = parseJSON["tTandem"] as? String
-                    self.tStudent.text = parseJSON["tStudent"] as? String
-                    self.tCutaway.text = parseJSON["tCutaway"] as? String
-                    self.tWingsuit.text = parseJSON["tWingsuit"] as? String
-                    self.tDistance.text = parseJSON["tFFD"] as? String
-                    self.tTime.text = parseJSON["tFFT"] as? String
+                    DispatchQueue.main.async {
+                        let results = parseJSON["results"]!
+                        self.name.text = "\(results["name"]!!)"
+                        self.tJumps.text = "\(results["tJumps"]!!)"
+                        self.tSport.text = "\(results["tSport"]!!)"
+                        self.tBase.text = "\(results["tBase"]!!)"
+                        self.tTandem.text = "\(results["tTandem"]!!)"
+                        self.tStudent.text = "\(results["tStudent"]!!)"
+                        self.tCutaway.text = "\(results["tCutaway"]!!)"
+                        self.tWingsuit.text = "\(results["tWingsuit"]!!)"
+                        self.tDistance.text = "\(results["tFFD"]!!)"
+                        self.tTime.text = "\(results["tFFT"]!!)"
+                        print(results)
+                    }
                 }
             }
         }
