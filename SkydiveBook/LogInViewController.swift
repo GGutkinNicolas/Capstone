@@ -54,10 +54,8 @@ class LogInViewController: UIViewController {
             let json =  try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! [String:AnyObject]
             //print out the message
             if let parseJSON = json {
-                
                 let message = parseJSON["message"] as? String
                 let status = parseJSON["status"] as? String
-                print("result: \(status!)")
                 
                 //if Error message pops up why
                 if (status! != "Success:") {

@@ -5,12 +5,11 @@
 //  Created by Guillaume Gutkin-Nicolas on 4/4/18.
 //  Copyright © 2018 Guillaume Gutkin-Nicolas. All rights reserved.
 //
-
 import UIKit
 import CoreLocation
 
 class WeatherViewController: UIViewController, UISearchBarDelegate {
-    
+    //Link the text fields to variables
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var todayTemp: UILabel!
     @IBOutlet var todayWind: UILabel!
@@ -18,8 +17,9 @@ class WeatherViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet var tomorrowWind: UILabel!
     @IBOutlet var todayImg: UIImageView!
     @IBOutlet var tomorrowImg: UIImageView!
-    @IBOutlet var todaySummary: UILabel!
-    @IBOutlet var tomorrowSummary: UILabel!
+    @IBOutlet var todaySummary: UITextView!
+    @IBOutlet var tomorrowSummary: UITextView!
+    
     
     var forecastData = [Weather]()
     
@@ -42,8 +42,8 @@ class WeatherViewController: UIViewController, UISearchBarDelegate {
                             DispatchQueue.main.async {
                                 self.todayTemp?.text = String(format:"%.1f °F", today.temperature)
                                 self.tomorrowTemp?.text = String(format:"%.1f °F", tomorrow.temperature)
-                                self.todayWind?.text = String(format:"%.1f mph",today.windSpeed)
-                                self.tomorrowWind?.text = String(format:"%.1f mph", tomorrow.windSpeed)
+                                self.todayWind?.text = String(format:"%.1f mph wind speeds",today.windSpeed)
+                                self.tomorrowWind?.text = String(format:"%.1f mph wind speeds", tomorrow.windSpeed)
                                 self.todaySummary?.text = String(today.summary)
                                 self.tomorrowSummary?.text = String(tomorrow.summary)
                                 self.todayImg?.image = UIImage(named: today.icon + ".png")
@@ -68,5 +68,4 @@ class WeatherViewController: UIViewController, UISearchBarDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 }

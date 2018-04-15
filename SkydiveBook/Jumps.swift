@@ -5,11 +5,10 @@
 //  Created by Guillaume Gutkin-Nicolas on 4/9/18.
 //  Copyright © 2018 Guillaume Gutkin-Nicolas. All rights reserved.
 //
-
 import Foundation
 
 class Jumps {
-    
+    //Initializes variables
     var jumpNum: String
     var jumpType: String
     var date: String
@@ -41,6 +40,7 @@ class Jumps {
         self.cutaway = json["cutaway"] as! String
     }
     
+    //More initializing
     init(jumpNum: String, jumpType: String, date: String, location: String ,aircraft: String, rig: String, canopy: String, exitAlt: String, depAlt: String, sWind: String, dTarget: String, wingsuit: String, cutaway: String) {
         self.jumpNum = jumpNum
         self.jumpType = jumpType
@@ -56,6 +56,5 @@ class Jumps {
         self.wingsuit = wingsuit
         self.cutaway = cutaway
     }
-    
 }
 

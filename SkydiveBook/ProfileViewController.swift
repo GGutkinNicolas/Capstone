@@ -8,7 +8,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    //Link the text fields to variables
     @IBOutlet var name: UILabel!
     @IBOutlet var tJumps: UILabel!
     @IBOutlet var tSport: UILabel!
@@ -36,17 +36,19 @@ class ProfileViewController: UIViewController {
     }
     
     func loadData() {
-        
+        //get username from the session
         let defaults = UserDefaults.standard
         let username = defaults.string(forKey: "userNameKey")
         
+        //Grab storred values from MAMP
         let myUrl = URL(string: "http://localhost:8888/registration/profilePage.php")
         var request = URLRequest(url: myUrl!)
         request.httpMethod = "POST"
         
+        //a String of what will be sent to the 'user' table
         let serverString = "username=\(username!)"
+       
         request.httpBody = serverString.data(using: String.Encoding.utf8)
-        
         let task = URLSession.shared.dataTask(with: request) {
             data, response, error in
             //if there's an error print it out
@@ -63,6 +65,7 @@ class ProfileViewController: UIViewController {
                 let status = parseJSON["status"] as? String
                 print("result: \(status!)")
                 
+                //if Error message pops up why
                 if (status! != "Success:") {
                     DispatchQueue.main.async {
                         let myMessage = UIAlertController(title: status, message: message, preferredStyle: UIAlertControllerStyle.alert)
@@ -71,7 +74,8 @@ class ProfileViewController: UIViewController {
                         self.present(myMessage, animated:true, completion: nil)
                     }
                 }
-                    
+                
+                //else Successful stuff happens
                 else
                 {
                     DispatchQueue.main.async {
@@ -94,7 +98,9 @@ class ProfileViewController: UIViewController {
         task.resume();
     }
     
+    //Action for logout button
     @IBAction func LogOutButton(_ sender: Any) {
+        //clears username value from the session
         UserDefaults.standard.removePersistentDomain(forName: "userNameKey")
         self.performSegue(withIdentifier: "Logout", sender: nil)
     }
