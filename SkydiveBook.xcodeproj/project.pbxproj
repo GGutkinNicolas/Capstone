@@ -17,9 +17,9 @@
 		96BBAC3F204DC16500DDE9EE /* SkydiveBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BBAC3E204DC16500DDE9EE /* SkydiveBookUITests.swift */; };
 		96BBAC4D204DC84C00DDE9EE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BBAC4C204DC84C00DDE9EE /* RegisterViewController.swift */; };
 		96BBAC4F204DF54B00DDE9EE /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BBAC4E204DF54B00DDE9EE /* LogInViewController.swift */; };
-		96BC8CAA206C39C600CA8F43 /* clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 96BC8CA9206C39C600CA8F43 /* clear.png */; };
 		96BC8CAD206C45B500CA8F43 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BC8CAC206C45B500CA8F43 /* Security.framework */; };
 		96C3D47C207575C700B5807B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C3D47B207575C700B5807B /* WeatherViewController.swift */; };
+		96D29F662083B75100BE25F1 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D29F652083B75100BE25F1 /* Weather.swift */; };
 		96ECB7C3207C1DF2007341A7 /* LogbookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ECB7C2207C1DF2007341A7 /* LogbookTableViewController.swift */; };
 		96ECB7C5207C1E79007341A7 /* LogbookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ECB7C4207C1E79007341A7 /* LogbookTableViewCell.swift */; };
 		96ECB7C7207C1F80007341A7 /* Jumps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ECB7C6207C1F80007341A7 /* Jumps.swift */; };
@@ -60,16 +60,9 @@
 		96BBAC40204DC16500DDE9EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96BBAC4C204DC84C00DDE9EE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		96BBAC4E204DF54B00DDE9EE /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		96BC8CA0206C38A600CA8F43 /* cloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cloudy.png; path = ../../weatherIcons/cloudy.png; sourceTree = "<group>"; };
-		96BC8CA1206C38A600CA8F43 /* rain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rain.png; path = ../../weatherIcons/rain.png; sourceTree = "<group>"; };
-		96BC8CA3206C38A600CA8F43 /* windy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = windy.png; path = ../../weatherIcons/windy.png; sourceTree = "<group>"; };
-		96BC8CA4206C38A600CA8F43 /* night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = night.png; path = ../../weatherIcons/night.png; sourceTree = "<group>"; };
-		96BC8CA5206C38A600CA8F43 /* snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = snow.png; path = ../../weatherIcons/snow.png; sourceTree = "<group>"; };
-		96BC8CA6206C38A600CA8F43 /* storm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = storm.png; path = ../../weatherIcons/storm.png; sourceTree = "<group>"; };
-		96BC8CA8206C390900CA8F43 /* partlyCloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = partlyCloudy.png; path = ../../weatherIcons/partlyCloudy.png; sourceTree = "<group>"; };
-		96BC8CA9206C39C600CA8F43 /* clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clear.png; path = Assets.xcassets/Pictures/clear.png; sourceTree = "<group>"; };
 		96BC8CAC206C45B500CA8F43 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		96C3D47B207575C700B5807B /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		96D29F652083B75100BE25F1 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		96ECB7C2207C1DF2007341A7 /* LogbookTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookTableViewController.swift; sourceTree = "<group>"; };
 		96ECB7C4207C1E79007341A7 /* LogbookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookTableViewCell.swift; sourceTree = "<group>"; };
 		96ECB7C6207C1F80007341A7 /* Jumps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jumps.swift; sourceTree = "<group>"; };
@@ -135,19 +128,12 @@
 				96ED6C55207E92260054F00F /* ProfileViewController.swift */,
 				96ECB7C2207C1DF2007341A7 /* LogbookTableViewController.swift */,
 				96ECB7C6207C1F80007341A7 /* Jumps.swift */,
+				96D29F652083B75100BE25F1 /* Weather.swift */,
 				96ECB7C4207C1E79007341A7 /* LogbookTableViewCell.swift */,
 				96BBAC27204DC16500DDE9EE /* LaunchScreen.storyboard */,
 				96BBAC2A204DC16500DDE9EE /* Info.plist */,
 				96BBAC25204DC16500DDE9EE /* Assets.xcassets */,
 				96740D142082792B00F1B83D /* Sky.jpeg */,
-				96BC8CA9206C39C600CA8F43 /* clear.png */,
-				96BC8CA0206C38A600CA8F43 /* cloudy.png */,
-				96BC8CA4206C38A600CA8F43 /* night.png */,
-				96BC8CA1206C38A600CA8F43 /* rain.png */,
-				96BC8CA5206C38A600CA8F43 /* snow.png */,
-				96BC8CA8206C390900CA8F43 /* partlyCloudy.png */,
-				96BC8CA6206C38A600CA8F43 /* storm.png */,
-				96BC8CA3206C38A600CA8F43 /* windy.png */,
 			);
 			path = SkydiveBook;
 			sourceTree = "<group>";
@@ -290,7 +276,6 @@
 				96740D152082792C00F1B83D /* Sky.jpeg in Resources */,
 				96BBAC26204DC16500DDE9EE /* Assets.xcassets in Resources */,
 				96BBAC24204DC16500DDE9EE /* Main.storyboard in Resources */,
-				96BC8CAA206C39C600CA8F43 /* clear.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +304,7 @@
 				96BBAC4F204DF54B00DDE9EE /* LogInViewController.swift in Sources */,
 				96ECB7C3207C1DF2007341A7 /* LogbookTableViewController.swift in Sources */,
 				960B79362059A5CB00690CF8 /* JumpRegistratonViewController.swift in Sources */,
+				96D29F662083B75100BE25F1 /* Weather.swift in Sources */,
 				96BBAC4D204DC84C00DDE9EE /* RegisterViewController.swift in Sources */,
 				96ECB7C7207C1F80007341A7 /* Jumps.swift in Sources */,
 				96ED6C56207E92260054F00F /* ProfileViewController.swift in Sources */,
