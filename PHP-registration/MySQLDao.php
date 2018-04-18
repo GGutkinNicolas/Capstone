@@ -70,65 +70,73 @@
         //Under Construction
         public function getProfileDetails($username) {
             $returnValue = array();
-            $returnValue["name"] = getFullName($username);
-            $returnValue["tJumps"] = getTotalJumps($username);
-            $returnValue["tSport"] = getTotalSportJumps($username);
-            $returnValue["tBase"] = getTotalBaseJumps($username);
-            $returnValue["tTandem"] = getTotalTandemJumps($username);
-            $returnValue["tStudent"] = getTotalStudentJumps($username);
-            $returnValue["tCutaway"] = getTotalCutaway($username);
-            $returnValue["tWingsuit"] = getTotalWingsuit($username);
-            $returnValue["tFFD"] = getTotalFFD($username);
-            $returnValue["tFFT"] = getTotalFFT($username);
+            $returnValue["name"] = $this->getFullName($username);
+            $returnValue["tJumps"] = $this->getTotalJumps($username);
+            $returnValue["tSport"] = $this->getTotalSportJumps($username);
+            $returnValue["tBase"] = $this->getTotalBaseJumps($username);
+            $returnValue["tTandem"] = $this->getTotalTandemJumps($username);
+            $returnValue["tStudent"] = $this->getTotalStudentJumps($username);
+            $returnValue["tCutaway"] = $this->getTotalCutaway($username);
+            $returnValue["tWingsuit"] = $this->getTotalWingsuit($username);
+            $returnValue["tFFD"] = $this->getTotalFFD($username);
+            $returnValue["tFFT"] = $this->getTotalFFT($username);
             return $returnValue;
         }
         //getsFullName
-        public function getsFullName($username) {
-            $sql = "SELECT fname, lname FROM jumpLog WHERE username = '".$username."'";
+        public function getFullName($username) {
+            $sql = "SELECT fname, lname FROM users WHERE username = '".$username."'";
             $result = $this->conn->query($sql);
-            return $result;
+            $returnValue = mysqli_fetch_array($result);
+            return $returnValue[0] . " " . $returnValue[1];
         }
         //gets Total Jumps
         public function getTotalJumps($username) {
             $sql = "SELECT MAX(jumpNum) FROM jumpLog WHERE username = '".$username."'";
             $result = $this->conn->query($sql);
-            return $result;
+            $returnValue = mysqli_fetch_array($result);
+            return $returnValue[0];
         }
         //gets Total Sport Jumps
         public function getTotalSportJumps($username) {
-            $sql = "SELECT COUNT(jumpType) FROM jumpLog WHERE jumpType = Sport AND username = '".$username."'";
+            $sql = "SELECT * FROM jumpLog WHERE jumpType = 'Sport' AND username = '".$username."'";
             $result = $this->conn->query($sql);
-            return $result;
+            $returnValue = mysqli_num_rows($result);
+            return $returnValue;
         }
         //gets Total B.A.S.E Jumps
         public function getTotalBaseJumps($username) {
-            $sql = "SELECT COUNT(jumpType) FROM jumpLog WHERE jumpType = B.A.S.E AND username = '".$username."'";
+            $sql = "SELECT * FROM jumpLog WHERE jumpType = 'B.A.S.E' AND username = '".$username."'";
             $result = $this->conn->query($sql);
-            return $result;
+            $returnValue = mysqli_num_rows($result);
+            return $returnValue;
         }
         //gets Total Tandem Jumps
         public function getTotalTandemJumps($username) {
-            $sql = "SELECT COUNT(jumpType) FROM jumpLog WHERE jumpType = Tandem AND username = '".$username."'";
+            $sql = "SELECT * FROM jumpLog WHERE jumpType = 'Tandem' AND username = '".$username."'";
             $result = $this->conn->query($sql);
-            return $result;
+            $returnValue = mysqli_num_rows($result);
+            return $returnValue;
         }
         //gets Total Student Jumps
         public function getTotalStudentJumps($username) {
-            $sql = "SELECT COUNT(jumpType) FROM jumpLog WHERE jumpType = Student AND username = '".$username."'";
+            $sql = "SELECT * FROM jumpLog WHERE jumpType = 'Student' AND username = '".$username."'";
             $result = $this->conn->query($sql);
-            return $result;
+            $returnValue = mysqli_num_rows($result);
+            return $returnValue;
         }
         //gets Total Cutaways
         public function getTotalCutaway($username) {
-            $sql = "SELECT COUNT(cutaway) FROM jumpLog WHERE cutaway = true AND username = '".$username."'";
+            $sql = "SELECT * FROM jumpLog WHERE cutaway = 'true' AND username = '".$username."'";
             $result = $this->conn->query($sql);
-            return $result;
+            $returnValue = mysqli_num_rows($result);
+            return $returnValue;
         }
         //gets Total Wingsuit
         public function getTotalWingsuit($username) {
-            $sql = "SELECT COUNT(wingsuit) FROM jumpLog WHERE wingsuit = true AND username = '".$username."'";
+            $sql = "SELECT * FROM jumpLog WHERE wingsuit = 'true' AND username = '".$username."'";
             $result = $this->conn->query($sql);
-            return $result;
+            $returnValue = mysqli_num_rows($result);
+            return $returnValue;
         }
         //gets Total Free Fall Distance
         public function getTotalFFD($username) {
@@ -136,36 +144,37 @@
             $sql2 = "SELECT SUM(depAlt) FROM jumpLog WHERE username = '".$username."'";
             $result1 = $this->conn->query($sql1);
             $result2 = $this->conn->query($sql2);
-            return ($result1 - $result2);
+            $value1 = mysqli_fetch_array($result1);
+            $value2 = mysqli_fetch_array($result2);
+            $returnValue = $value1[0] - $value2[0];
+            return $returnValue;
+            
         }
         //get Total Free Fall Time
         // 12 sec for the first 1000 feet then 6 sec for every 1000 feet after
         public function getTotalFFT($username) {
-            $FFD = getTotalFFD($username);
-            $totalRJ = getTotalRJ($username);
+            $FFD = $this->getTotalFFD($username);
+            $totalRJ = $this->getTotalRJ($username);
             //handles the first 1000 feet
             $fTime = $totalRJ * 12;
-            $FFD = $FFD - ($totalRJ * 1000);
+            $newFFD = $FFD - ($totalRJ * 1000);
             //handles the remaining 1000 feet
-            $result = $fTime + (($FFD / 1000) * 6);
+            $result = $fTime + (($newFFD / 1000) * 6);
             return $result;
         }
         //get Total Registered Jumps
         public function getTotalRJ($username) {
             $sql = "SELECT COUNT(jumpNum) FROM jumpLog WHERE username = '".$username."'";
             $result = $this->conn->query($sql);
-            return $result;
+            $returnValue = mysqli_num_rows($result);
+            return $returnValue;
         }
         //returns jump info
         public function getJumpList($username) {
             $returnValue = array();
             $sql = "SELECT * FROM jumpLog WHERE username = '".$username."'";
             $result = $this->conn->query($sql);
-            $returnValue = mysqli_fetch_all ($result, MYSQLI_ASSOC);
-            /*if($result != null && (mysqli_num_rows($result) >= 1)) {
-                $row = $result->fetch_array(MYSQLI_ASSOC);
-                $returnValue[] = $row;
-            }*/
+            $returnValue = mysqli_fetch_all($result, MYSQLI_ASSOC);
             return $returnValue;
         }
         

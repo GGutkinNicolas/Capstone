@@ -11,6 +11,7 @@
     //variables for the values
     $username = $_POST["username"];
     $returnValue["results"] = $dao->getJumpList($username);
+    $returnValue["message"] = "";
     
     //if profileDetails is empty display error message
     if(empty($returnValue))

@@ -10,7 +10,7 @@
     $username = $_POST["username"];
     $password = $_POST["password"];
     //ecrypt password with md5 before storing it
-    $encrypted_password = md5($password);
+    $encrypted_password = password_hash($password, PASSWORD_BCRYPT);
     //new MySqlDao object
     $dao = new MySQLDao();
     $dao->openConnection();

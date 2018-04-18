@@ -10,11 +10,11 @@
     
     //variables for the values
     $username = $_POST["username"];
-    $returnValue = $dao->getProfileDetails($username);
-  
+    $returnValue["results"] = $dao->getProfileDetails($username);
+    $returnValue["message"] = "";
+    
     //if profileDetails is empty display error message
-    if(empty($returnValue))
-    {
+    if(empty($returnValue)) {
         $returnValue["status"] = "Error:";
         $returnValue["message"] = "We apologize something went wrong on our end.";
     }

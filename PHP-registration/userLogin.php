@@ -8,7 +8,8 @@
     $username = $_POST["username"];
     $password = $_POST["password"];
     //ecrypt password with md5 before storing it
-    $encrypted_password = md5($password);
+    $encrypted_password = password_hash($password, PASSWORD_BCRYPT);
+    
     //new MySqlDao object
     $dao = new MySQLDao();
     $dao->openConnection();
@@ -18,6 +19,7 @@
     $returnValue = array();
     $returnValue["message"] = "";
     $returnValue["status"] = "";
+    
     //if it is empty than error
     if(empty($username) || empty($password))
     {
@@ -31,16 +33,14 @@
         $returnValue["message"] = "This user does not exists.";
     }
     //if password don't match than error
-    else if ($userDetails["pass"] != $encrypted_password) {
+    else if (!password_verify($password, $userDetails["pass"])) {
+        echo $userDetails["pass"] . ' ' . $encrypted_password;
         $returnValue["status"] = "Error:";
         $returnValue["message"] = "Invalid password.";
     }
     //else log in
     else
     {
-        /*
-        $returnValue["username"] = $userDetails["username"];
-        */
         $returnValue["status"] = "Success:";
         $returnValue["message"] = "You are successfully logged in.";
     }
