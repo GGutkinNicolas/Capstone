@@ -13,7 +13,7 @@ A prototype of an iOS app to log skydives. A simpler approach to the current pen
 
 -The project will replace the current physical logbooks handed out at dropzones making it more portable and one less thing to worry about packing
 
-    -*Features:*
+-*Features:*
 	-User Login and Registration
 	-Logbook Capability
 	-A profile that displays total jumps, etc..
@@ -63,7 +63,7 @@ A prototype of an iOS app to log skydives. A simpler approach to the current pen
 
 -icons were grabbed from: https://icons8.com, https://flaticon.com
 
-    -*Tutorials:*
+-*Tutorials:*
         -Youtube Channels: Brian Advent, Sergey Kargopolov, Lets Build That App, The Swift Guy
         -Website: https://developer.apple.com/swift/
         -API: https://darksky.net/dev
