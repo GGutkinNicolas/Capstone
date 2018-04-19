@@ -15,7 +15,7 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Sky.jpeg")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "MountainSky.jpg")!)
     }
 
     override func didReceiveMemoryWarning() {

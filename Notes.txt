@@ -37,3 +37,7 @@ Risk Areas:
 	-I don't have much experience with anything that I'm trying to implement
 	-The 16 week time frame to learn and develop might be too short
 				Game On!!!
+
+curl http://localhost:8888/registration/profilePage.php -d "username=a"
+
+

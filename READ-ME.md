@@ -63,6 +63,8 @@ A prototype of an iOS app to log skydives. A simpler approach to the current pen
 
 -icons were grabbed from: https://icons8.com, https://flaticon.com
 
+-background pictures were grabbed from: http://freeios8.com
+
     -*Tutorials:*
         -Youtube Channels: Brian Advent, Sergey Kargopolov, Lets Build That App, The Swift Guy
         -Website: https://developer.apple.com/swift/

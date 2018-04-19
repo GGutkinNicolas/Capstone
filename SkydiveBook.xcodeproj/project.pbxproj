@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		960B79362059A5CB00690CF8 /* JumpRegistratonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960B79352059A5CB00690CF8 /* JumpRegistratonViewController.swift */; };
-		96740D152082792C00F1B83D /* Sky.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 96740D142082792B00F1B83D /* Sky.jpeg */; };
 		96BBAC1F204DC16500DDE9EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BBAC1E204DC16500DDE9EE /* AppDelegate.swift */; };
 		96BBAC24204DC16500DDE9EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96BBAC22204DC16500DDE9EE /* Main.storyboard */; };
 		96BBAC26204DC16500DDE9EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96BBAC25204DC16500DDE9EE /* Assets.xcassets */; };
@@ -18,12 +17,14 @@
 		96BBAC4D204DC84C00DDE9EE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BBAC4C204DC84C00DDE9EE /* RegisterViewController.swift */; };
 		96BBAC4F204DF54B00DDE9EE /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BBAC4E204DF54B00DDE9EE /* LogInViewController.swift */; };
 		96BC8CAD206C45B500CA8F43 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BC8CAC206C45B500CA8F43 /* Security.framework */; };
+		96C36BD82087D847006D23DA /* MountainSky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96C36BD72087D847006D23DA /* MountainSky.jpg */; };
 		96C3D47C207575C700B5807B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C3D47B207575C700B5807B /* WeatherViewController.swift */; };
 		96D29F662083B75100BE25F1 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D29F652083B75100BE25F1 /* Weather.swift */; };
 		96ECB7C3207C1DF2007341A7 /* LogbookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ECB7C2207C1DF2007341A7 /* LogbookTableViewController.swift */; };
 		96ECB7C5207C1E79007341A7 /* LogbookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ECB7C4207C1E79007341A7 /* LogbookTableViewCell.swift */; };
 		96ECB7C7207C1F80007341A7 /* Jumps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ECB7C6207C1F80007341A7 /* Jumps.swift */; };
 		96ED6C56207E92260054F00F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ED6C55207E92260054F00F /* ProfileViewController.swift */; };
+		96F67AEC2087DAD200CE552E /* CloudySky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96F67AEB2087DAD200CE552E /* CloudySky.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,6 @@
 
 /* Begin PBXFileReference section */
 		960B79352059A5CB00690CF8 /* JumpRegistratonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpRegistratonViewController.swift; sourceTree = "<group>"; };
-		96740D142082792B00F1B83D /* Sky.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Sky.jpeg; path = Assets.xcassets/Pictures/Sky.jpeg; sourceTree = "<group>"; };
 		96BBAC1B204DC16500DDE9EE /* SkydiveBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkydiveBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BBAC1E204DC16500DDE9EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96BBAC23204DC16500DDE9EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,12 +61,14 @@
 		96BBAC4C204DC84C00DDE9EE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		96BBAC4E204DF54B00DDE9EE /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		96BC8CAC206C45B500CA8F43 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		96C36BD72087D847006D23DA /* MountainSky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = MountainSky.jpg; path = Assets.xcassets/Pictures/MountainSky.jpg; sourceTree = "<group>"; };
 		96C3D47B207575C700B5807B /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		96D29F652083B75100BE25F1 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		96ECB7C2207C1DF2007341A7 /* LogbookTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookTableViewController.swift; sourceTree = "<group>"; };
 		96ECB7C4207C1E79007341A7 /* LogbookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookTableViewCell.swift; sourceTree = "<group>"; };
 		96ECB7C6207C1F80007341A7 /* Jumps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jumps.swift; sourceTree = "<group>"; };
 		96ED6C55207E92260054F00F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		96F67AEB2087DAD200CE552E /* CloudySky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = CloudySky.jpg; path = Assets.xcassets/Pictures/CloudySky.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +135,8 @@
 				96BBAC27204DC16500DDE9EE /* LaunchScreen.storyboard */,
 				96BBAC2A204DC16500DDE9EE /* Info.plist */,
 				96BBAC25204DC16500DDE9EE /* Assets.xcassets */,
-				96740D142082792B00F1B83D /* Sky.jpeg */,
+				96F67AEB2087DAD200CE552E /* CloudySky.jpg */,
+				96C36BD72087D847006D23DA /* MountainSky.jpg */,
 			);
 			path = SkydiveBook;
 			sourceTree = "<group>";
@@ -272,9 +275,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96F67AEC2087DAD200CE552E /* CloudySky.jpg in Resources */,
 				96BBAC29204DC16500DDE9EE /* LaunchScreen.storyboard in Resources */,
-				96740D152082792C00F1B83D /* Sky.jpeg in Resources */,
 				96BBAC26204DC16500DDE9EE /* Assets.xcassets in Resources */,
+				96C36BD82087D847006D23DA /* MountainSky.jpg in Resources */,
 				96BBAC24204DC16500DDE9EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
