@@ -1,75 +1,55 @@
-**Metadata Section**
-
 ## SkydiveBook – Capstone Project
 A prototype of an iOS app to log skydives. A simpler approach to the current pen and paper technique.
 
 *Created for CS 4800 – Capstone Spring 2018
 
-*Authors:* Guillaume Gutkin Nicolas
+*Author:* Guillaume Gutkin Nicolas
 
 ---
 
-**Project Overview**  
+**Project Description**  
 
--The project will replace the current physical logbooks handed out at dropzones making it more portable and one less thing to worry about packing
+-The idea behind this project is to replace the current physical logbooks handed out at skydiving dropzones, making it one less thing to worry about packing. The app consists of a user registraion/login page and three tab features. The features include A logbook that keeps an organized list of the users jumps, a profile which displays a summary of the jumpers accomplishments, and a weather app that allows users to check the weather at their local spot before driving over. The hope is too have as many skydivers download and start using this app. 
 
-    -*Features:*
-        -User Login and Registration
-        -Logbook Capability
-        -A profile that displays total jumps, etc..
-        -A weather search bar to look up current dropzones weather
-    
--It is interesting to me because I am in the process of getting my A-license and will be using this app to make my life easier.
-        
--The users of this app will be as many skydivers as I can convince. USPA's website states that there is around 35,000 skydivers in the us.
+-The technology used to make this project is listed bellow:
+        -Developed on a MacBook
+        -Xcode as the editor
+        -Programming Languages: Swift, PHP, mySQL
+        -MAMP as the local server
+        -darksky API for the weather data
 
 ---
 
-**Similar Existing Work:**
+**Screenshots**
 
--There are currently two other apps in the iOS store that serve a similar purpose
-
----
-
-**Previous Experience:**
-
--Database class
-
----
-
-**Technology:**
-
--Developed on a MacBook Pro
-
--Used Xcode as my editor
-
--Coded in Swift, PHP, mySQL
-
--used MAMP as a local server for database
-
--used darksky API for weather functionality
+![WelcomePage](screenshots/WelcomePage.png)
+![RegisterPage](screenshots/RegisterPage.png)
+![LogbookPage](screenshots/LogbookPage.png)
+![JumpRegPage](screenshots/JumpRegPage.png)
+![ProfilePage](screenshots/ProfilePage.png)
+![WeatherPage](screenshots/WeatherPage.png)
 
 ---
 
-**Risk Areas:**
+**User instructions**
 
--I don't have much experience with anything that I'm trying to implement
-
--The 16 week time frame to learn and develop might be too short
+-To run the project the files must be uploaded to Xcode or a similar IDE and ran through the simulator. Then a version of MAMP must be installed on the local machine. Lastly he SQL file contains the code to plug into the database to create the tables. Once those steps are followed the app will work.
 
 ---
 
-**Integrity:**
+**Developer instructions**
 
--icons were grabbed from: https://icons8.com, https://flaticon.com
+-The Development environment that I used was Xcode. To test out the app the code files can be transfered to a local set up of Xcode and ran using the simulator. 
 
--background pictures were grabbed from: http://freeios8.com
+-To run tests users can interact with the app through the simulator. If the app is not loading the right information then i recommend using the curl terminal command. 
 
-    -*Tutorials:*
-        -Youtube Channels: Brian Advent, Sergey Kargopolov, Lets Build That App, The Swift Guy
-        -Website: https://developer.apple.com/swift/
-        -API: https://darksky.net/dev
-        
+-To contribute to this project please contact me at (ggn@gmail.com) 
+
+---
+
+**Resources**
+
+![TechnicalReport](TechnicalReport.md)
 
     
 

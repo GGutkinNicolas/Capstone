@@ -23,7 +23,7 @@ class Jumps {
     var wingsuit: String
     var cutaway: String
     
-    //Initialize
+    //Initialize them with values
     init(json: [String:Any] ) {
         self.jumpNum = json["jumpNum"] as! String
         self.jumpType = json["jumpType"] as! String
