@@ -85,4 +85,24 @@ The last feature is a weather report of any desired location. The user enters a 
 
 # References <a name="references"></a>
 
+<b>Youtube Channels:</b>
+- Brian Advent (https://www.youtube.com/channel/UCysEngjfeIYapEER9K8aikw)
+- Sergey Kargopolov (https://www.youtube.com/user/sergeykargopolov)
+- Lets Build That App (https://www.youtube.com/channel/UCuP2vJ6kRutQBfRmdcI92mA)
+- The Swift Guy (https://www.youtube.com/channel/UC-d1NWv5IWtIkfH47ux4dWA)
+
+<b>Pictures and Icons:</b>
+https://icons8.com/
+freeios8.com/
+
+<b>Library:</b>
+- https://darksky.net/dev
+
+<b>Outside Help:</b>
+- Eric Russo (undergraduate)
+- Professor Waldon (teacher)
+
+<b>Other:</b>
+- https://developer.apple.com/swift/
+
 ---
