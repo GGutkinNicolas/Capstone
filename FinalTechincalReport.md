@@ -78,7 +78,8 @@ The last feature is a weather report of any desired location. The user enters a 
 # Results <a name="results"></a>
 
 By the end of the Capstone class the core features implemented include: a login/registration page, a logbook, a profile summary, and a weather page. Below is a table that indicates the features I planned at the start of the project:
-![ResultTable](screenshots/ResultsTable)
+
+![ResultTable](screenshots/ResultsTable.png)
 
 <b>Not Implemented:</b>
 The “Profile Picture” is a feature that I haven’t implemented yet. To implement this I will create a new table that has two columns: a username, and a picture. When users want to change the picture it will delete that users entry in the table and enter in a new one after with the new picture. This feature wasn’t implemented simply because I ran out of time. The hardest obstacle I might encounter is formatting the image to fit to a specific frame. 
