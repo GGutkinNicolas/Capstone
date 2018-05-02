@@ -16,7 +16,7 @@ To accomplish an easy to use product, I limited the interface to three tabs. The
 This being my first mobile development project I was quite pleased with the result. I was unable to add an editable profile picture and viewable logbook cells in the time I was allotted. However, I was able to integrate the three tabs mentioned above, as well as a login and registration page that will let me keep track of all users data for future work. A future feature I plan to add is a leaderboard score and challenges for the users to compete against one another. 
 
 
-<b>Keyword:</b> iOS, Xcode, mySQL, PHP, Apple Development, Skydiving, Logbook, User Registration, Weather, Darksky, Views, Bcrypt, JSON. 
+<b>Keywords:</b> iOS, Xcode, mySQL, PHP, Apple Development, Skydiving, Logbook, User Registration, Weather, Darksky, Views, Bcrypt, JSON. 
 
 ---
 
@@ -40,7 +40,15 @@ This being my first mobile development project I was quite pleased with the resu
 # Introduction and Project Overview <a name="intropo"></a>
 
 ## Problem, Objectives, Users <a name="pou"></a>
+
+The problem I addressed for this application is the need to transition the current Skydive Logbook from analog to digital. The current book is limited with amount of pages available, and it is small and easily misplaced. A digital version will allow for an unlimited amount of jumps registered, as well as instant summary updates.
+
+The objective was to integrate the current logbook’s field in a digital form, and display the information’s summary on a profile page. The idea behind the design was to create the simplest interface so that people of all ages could use it, an important consideration because the sport ranges from 18 year olds to 70 year olds. To keep it simple I restricted myself to three tabs and limited the inputs to the fields that are in the current logbook. 
+  	
+The users I was targeting as mentioned above is any of the current skydivers between the age of 18 and 70 that have an Apple device. The preferable device is the iPhone X as the proportions were designed with that screen in mind. 
+--
 ## Background Information <a name="backinfo"></a>
+
 ## Features <a name="features"></a>
 
 ---
