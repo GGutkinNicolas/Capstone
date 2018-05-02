@@ -81,6 +81,14 @@ The last feature is a weather report of any desired location. The user enters a 
 
 # Conclusion and Future Work <a name="cfw"></a>
 
+The problem I addressed in the creation of this application is the benefit of transitioning from analog to digital when logging data. I focused on the skydiving community who still ask for a physical logbook at drop zones, something I hope to change. For this project my approach was to create a basic web application at first and then transition it to iOS. I started with web application because it was something that I was comfortable with after taking CS 3440. Once the database and PHP files were working I switched over to iOS one page at a time. It ended up working, but I spent a good amount of time trying to figure out the Swift syntax during the conversion. This time spent on syntax resulted in some features not being implemented.  
+
+A lesson that I learned creating this application is to manage my time more efficiently. During the development process I spent a lot of time focusing on the user registration and weather feature, which were bonus features complimenting my original idea. I should’ve started with the Logbook feature since it’s the core of the application, and made sure that every functionality I wanted was implemented before moving on to the other features. This resulted in my inability to implement a view for the logbook cells and an edit/delete feature. On a future project I will begin at the core and then begin adding on other features little by little. 
+
+The resulting application I ended with has a good bit of utilities. The first being the user login/registration and weather feature can be exported to other mobile applications I develop in the future. Second is the application works, so my next step will be putting it in the hands of skydivers and getting feedback, if positive possibly make a profit. Lastly the educational experience of developing a project I envisioned from start to finish is invaluable.
+
+Areas of future work on this application will be ironing out some bugs, and finish adding the functionality I didn’t have enough time to. Mainly being the view/edit/delete logbook cells, an editable profile picture, and to fix the initial load of the profile summary which prints null for some fields rather than zero. As for an area of future study for this project, I would like to learn more about social media and how users interact and share with each other. A small social media feature would be a great addition to the application, an area for users to exchange information with others and arrange meet ups at drop zones. 
+
 ---
 
 # References <a name="references"></a>
@@ -93,7 +101,7 @@ The last feature is a weather report of any desired location. The user enters a 
 
 <b>Pictures and Icons:</b>
 - https://icons8.com/
-- freeios8.com/
+- https://freeios8.com/
 
 <b>Library:</b>
 - https://darksky.net/dev
