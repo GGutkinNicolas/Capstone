@@ -47,14 +47,14 @@ The objective was to integrate the current logbook’s field in a digital form, 
   	
 The users I was targeting as mentioned above is any of the current skydivers between the age of 18 and 70 that have an Apple device. The preferable device is the iPhone X as the proportions were designed with that screen in mind. 
 
--
+--
 ## Background Information <a name="backinfo"></a>
 
 I chose this application because over the past couple years I have been working on obtaining my A-License, the first of four licenses, and officially joining the skydiving community. I thought the Capstone class would be a perfect opportunity to design something that I will actually use in my life, and introduce to a community I want to be a part of.
 
 There are two classes I have taken during my Computer Science Degree at Appalachian State University that helped me with the development of this application. The first being CS 3430 - Database, a course that covers the design, organization, representation, and manipulation of databases. The class helped me develop skills in mySQL and PHP that were instrumental to this application. My database runs using mySQL code that can be found in a file within this repository, and PHP was the language I used to communicate between the application and the server. The second class was CS 3440 - Client Side Web Programming, a course that covers browser scripting languages, GUI presentation, server communication, event handling, and using JavaScript and JSON. I initially started this application as a web platform, before transferring over to iOS, using many of the previous workouts I had completed for that class. Already being familiar with JSON, event handling, and server communication saved me a ton of time during the learning curve. Every call returned from the server or the API is formatted in JSON making the data easily accessible for the front end. 
 
--
+--
 ## Features <a name="features"></a>
 
 ---
