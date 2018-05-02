@@ -16,9 +16,8 @@ To accomplish an easy to use product, I limited the interface to three tabs. The
 This being my first mobile development project I was quite pleased with the result. I was unable to add an editable profile picture and viewable logbook cells in the time I was allotted. However, I was able to integrate the three tabs mentioned above, as well as a login and registration page that will let me keep track of all users data for future work. A future feature I plan to add is a leaderboard score and challenges for the users to compete against one another. 
 
 
-<b>Keyword:</b> iOS, Xcode, 
+<b>Keyword:</b> iOS, Xcode, mySQL, PHP, Apple Development, Skydiving, Logbook, User Registration, Weather, Darksky, Views, Bcrypt, JSON. 
 
-iOS, Xcode, Swift, mySQL, PHP, Apple Development, skydiving, logbook, user registration, weather, darksky, views.
 ---
 
 # Table of contents
