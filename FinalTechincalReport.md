@@ -47,15 +47,23 @@ The objective was to integrate the current logbook’s field in a digital form, 
   	
 The users I was targeting as mentioned above is any of the current skydivers between the age of 18 and 70 that have an Apple device. The preferable device is the iPhone X as the proportions were designed with that screen in mind. 
 
---
 ## Background Information <a name="backinfo"></a>
 
 I chose this application because over the past couple years I have been working on obtaining my A-License, the first of four licenses, and officially joining the skydiving community. I thought the Capstone class would be a perfect opportunity to design something that I will actually use in my life, and introduce to a community I want to be a part of.
 
-There are two classes I have taken during my Computer Science Degree at Appalachian State University that helped me with the development of this application. The first being CS 3430 - Database, a course that covers the design, organization, representation, and manipulation of databases. The class helped me develop skills in mySQL and PHP that were instrumental to this application. My database runs using mySQL code that can be found in a file within this repository, and PHP was the language I used to communicate between the application and the server. The second class was CS 3440 - Client Side Web Programming, a course that covers browser scripting languages, GUI presentation, server communication, event handling, and using JavaScript and JSON. I initially started this application as a web platform, before transferring over to iOS, using many of the previous workouts I had completed for that class. Already being familiar with JSON, event handling, and server communication saved me a ton of time during the learning curve. Every call returned from the server or the API is formatted in JSON making the data easily accessible for the front end. 
+Before beginning the development I went through the Apple Store looking for any similar existing work, and found two other applications that aimed to accomplish the same thing. I downloaded and played around with them for a bit to see if I liked the feel, and if the project was worth building if existing applications already do the same thing. After using them I found that they had way too many extraneous features such as calculators, import/export settings, and directories that made you log your gear and aircrafts before being able to use them in the actual Logbook. I decided I didn’t want my application to have all the calculations done in the backend, and to keep the form as close to the traditional one as possible. 
+	
+I took two classes at Appalachian State University that helped me with the development of this application. The first being CS 3430 - Database, a course that covers the design, organization, representation, and manipulation of databases. The class helped me develop skills in mySQL and PHP that were instrumental to this application. My database runs using mySQL code that can be found in a file within this repository, and PHP was the language I used to communicate between the application and the server. The second class was CS 3440 - Client Side Web Programming, a course that covers browser scripting languages, server communication, event handling, and using JSON. I initially started this application as a web platform, before transferring over to iOS, using many of the previous workouts I had completed for that class. Already being familiar with JSON, event handling, and server communication saved me a ton of time during the learning curve. Every call returned from the server or the API is formatted in JSON making the data easily accessible for the front end.
 
---
 ## Features <a name="features"></a>
+
+This application has four main features. The first being a user login and registration page, which prevents any unregistered individuals from entering, and making sure that each user has a unique username so that there is no unwanted data conflicts. My main reason for implementing this feature is to include a leaderboard in future work, to have competitions between all users.
+
+The second feature is the logbook that displays the users previously logged jumps by jump number, location, and date. It also allows users to add more jumps using the adder in the top right of the screen. When pressed the user is redirected to a form that looks very similar to the current logbook, so that it is an easy transition. Unfortunately the logbook cells don’t redirect to a view with all that jump’s information with a delete option yet, that part is still under construction.
+
+The third feature is the profile summary which is a simple view that displays the users name, jump total, time spent in free fall, etc. This feature requires no input from the user, it pulls all its data from the logbook feature and runs the calculations in the background. A missing part of this feature is an editable profile picture, so that the user can add a personal touch. 
+
+The last feature is a weather report of any desired location. The user enters a location in the search bar, then the tab displays the weather for that day and the following. All the data pulled for the weather is from Darksky’s API, a weather website that has a library for developers to use. 
 
 ---
 
