@@ -79,9 +79,9 @@ The last feature is a weather report of any desired location. The user enters a 
 
 By the end of the Capstone class the core features implemented include: a login/registration page, a logbook, a profile summary, and a weather page. Below is a table that indicates the features I planned at the start of the project:
 
-![ResultTable](screenshots/ResultsTable.png)
 
 <b>Not Implemented:</b>
+
 The “Profile Picture” is a feature that I haven’t implemented yet. To implement this I will create a new table that has two columns: a username, and a picture. When users want to change the picture it will delete that users entry in the table and enter in a new one after with the new picture. This feature wasn’t implemented simply because I ran out of time. The hardest obstacle I might encounter is formatting the image to fit to a specific frame. 
 
 The “Visited Drop Zones” and “Link to Skydivers Instruction Manual” are two features I decided to remove early on in the development process too make the application easier to use. I was afraid that too many extra features such as those would overwhelm the users like the other two existing applications did for me. Also I figure that they would have pictures or mementos to remember the drop zones they had visited. 
