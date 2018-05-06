@@ -135,21 +135,21 @@ Areas of future work on this application will be ironing out some bugs, and fini
 # References <a name="references"></a>
 
 <b>Youtube Channels:</b>
-[1] Brian Advent (https://www.youtube.com/channel/UCysEngjfeIYapEER9K8aikw)
-[2] Sergey Kargopolov (https://www.youtube.com/user/sergeykargopolov)
-[3] Lets Build That App (https://www.youtube.com/channel/UCuP2vJ6kRutQBfRmdcI92mA)
-[4] The Swift Guy (https://www.youtube.com/channel/UC-d1NWv5IWtIkfH47ux4dWA)
+- [1] Brian Advent (https://www.youtube.com/channel/UCysEngjfeIYapEER9K8aikw)
+- [2] Sergey Kargopolov (https://www.youtube.com/user/sergeykargopolov)
+- [3] Lets Build That App (https://www.youtube.com/channel/UCuP2vJ6kRutQBfRmdcI92mA)
+- [4] The Swift Guy (https://www.youtube.com/channel/UC-d1NWv5IWtIkfH47ux4dWA)
 
 <b>Pictures and Icons:</b>
-[5] https://icons8.com/
-[6] https://freeios8.com/
+- [5] https://icons8.com/
+- [6] https://freeios8.com/
 
 <b>Outside Help:</b>
-[7] Eric Russo (Undergraduate)
-[8] Chris Waldon (Professor)
+- [7] Eric Russo (Undergraduate)
+- [8] Chris Waldon (Professor)
 
 <b>Other:</b>
-[9] https://developer.apple.com/swift/
-[10] https://darksky.net/dev
+- [9] https://developer.apple.com/swift/
+- [10] https://darksky.net/dev
 
 ---
