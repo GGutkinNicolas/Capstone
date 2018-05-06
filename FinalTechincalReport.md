@@ -69,8 +69,13 @@ The last feature is a weather report of any desired location. The user enters a 
 
 ## Design <a name="design"></a>
 
-This application has
+The idea behind the design was to keep it as simple as possible so that anyone ranging from 18 to 70 would have an easy time transitioning to it. To achieve this I used a tab controller with icons to alternate between the three pages. I also implemented security measures to make sure the user doesn't input the wrong thing. When registering a new user I added the "Re-type Password" field to make sure that the user has the password they intended. The passwords are all hashed using Bcrypt encryption before they are stored on the database, preventing even the developer from knowing the password making it more secure. 
+
+The weather page uses an outside API to help get the data it displays. When a user enters a query in the search bar, that query is then sent to the Darksky API, and if valid will return a large amount of information. A method in the weather page process that information and selects only the data required, which it then displays. 
+
+The design of this application is illustrated bellow:
 ![Diagram](screenshots/Diagram.png)
+
 
 ## Development <a name="development"></a>
 
@@ -130,23 +135,21 @@ Areas of future work on this application will be ironing out some bugs, and fini
 # References <a name="references"></a>
 
 <b>Youtube Channels:</b>
-- Brian Advent (https://www.youtube.com/channel/UCysEngjfeIYapEER9K8aikw)
-- Sergey Kargopolov (https://www.youtube.com/user/sergeykargopolov)
-- Lets Build That App (https://www.youtube.com/channel/UCuP2vJ6kRutQBfRmdcI92mA)
-- The Swift Guy (https://www.youtube.com/channel/UC-d1NWv5IWtIkfH47ux4dWA)
+[1] Brian Advent (https://www.youtube.com/channel/UCysEngjfeIYapEER9K8aikw)
+[2] Sergey Kargopolov (https://www.youtube.com/user/sergeykargopolov)
+[3] Lets Build That App (https://www.youtube.com/channel/UCuP2vJ6kRutQBfRmdcI92mA)
+[4] The Swift Guy (https://www.youtube.com/channel/UC-d1NWv5IWtIkfH47ux4dWA)
 
 <b>Pictures and Icons:</b>
-- https://icons8.com/
-- https://freeios8.com/
-
-<b>Library:</b>
-- https://darksky.net/dev
+[5] https://icons8.com/
+[6] https://freeios8.com/
 
 <b>Outside Help:</b>
-- Eric Russo (Undergraduate)
-- Chris Waldon (Professor)
+[7] Eric Russo (Undergraduate)
+[8] Chris Waldon (Professor)
 
 <b>Other:</b>
-- https://developer.apple.com/swift/
+[9] https://developer.apple.com/swift/
+[10] https://darksky.net/dev
 
 ---
