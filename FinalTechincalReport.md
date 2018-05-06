@@ -84,6 +84,7 @@ My testing approach for this application was mostly manual. While I was developi
 Lastly I also used print statements throughout the development process to see what the data looked like at certain stages. This was very useful in identifying which part of the code was failing.
 
 An example call that can be used for testing with curl:
+
         curl http://localhost:8888/registration/profilePage.php -d “username=a"
 
 ---
