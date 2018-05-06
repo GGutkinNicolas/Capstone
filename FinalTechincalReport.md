@@ -69,10 +69,22 @@ The last feature is a weather report of any desired location. The user enters a 
 
 ## Design <a name="design"></a>
 
+This application has
 ![Diagram](screenshots/Diagram.png)
 
 ## Development <a name="development"></a>
+
+For this project my development approach was to create a basic web application at first and then transition it to iOS. I started with web application because it was something that I was comfortable with after taking CS 3440. I designed all the pages without worrying about the aesthetic, and focusing the communication between front and back end. For the backend I visited two options for the database, MAMP and Google’s Firebase. After interacting with both I chose MAMP because of it’s familiarity. We used the same PHPAdmin interface in CS 3430. Once I got the database and PHP files working with the web pages I switched over to iOS one page at a time. It ended up working, but I spent a good amount of time trying to figure out the Swift syntax during the conversion. The segues between pages also interacted much differently then the web application segues, causing a lot of pesky bugs at first. 
+
+A risk area that I was addressing by developing a web application on the side, was my lack of experience with mobile development. The web application was my safety net incase the mobile application proved to be to challenging. 
+
 ## Test <a name="test"></a>
+
+My testing approach for this application was mostly manual. While I was developing a page I would only work with one input field and comment out the rest. My thinking was that since all fields on a page will be sent and handled the same, once I get one to work the rest will follow the format and should work. When the fields were communicating with the back end properly, but printing out odd results I used the “curl” terminal command to do my testing. It saved me time to test through the terminal rather then re-entering data through the simulator every time. 
+Lastly I also used print statements throughout the development process to see what the data looked like at certain stages. This was very useful in identifying which part of the code was failing.
+
+An example call that can be used for testing with curl:
+    curl http://localhost:8888/registration/profilePage.php -d “username=a"
 
 ---
 
@@ -105,8 +117,6 @@ Screenshots of the implemented results can be found in the ![READ-ME](/READ-ME.m
 ---
 
 # Conclusion and Future Work <a name="cfw"></a>
-
-The problem I addressed in the creation of this application is the benefit of transitioning from analog to digital when logging data. I focused on the skydiving community who still ask for a physical logbook at drop zones, something I hope to change. For this project my approach was to create a basic web application at first and then transition it to iOS. I started with web application because it was something that I was comfortable with after taking CS 3440. Once the database and PHP files were working I switched over to iOS one page at a time. It ended up working, but I spent a good amount of time trying to figure out the Swift syntax during the conversion. This time spent on syntax resulted in some features not being implemented.  
 
 A lesson that I learned creating this application is to manage my time more efficiently. During the development process I spent a lot of time focusing on the user registration and weather feature, which were bonus features complimenting my original idea. I should’ve started with the Logbook feature since it’s the core of the application, and made sure that every functionality I wanted was implemented before moving on to the other features. This resulted in my inability to implement a view for the logbook cells and an edit/delete feature. On a future project I will begin at the core and then begin adding on other features little by little. 
 
