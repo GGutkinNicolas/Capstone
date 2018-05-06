@@ -101,6 +101,8 @@ The “SCUBA version” was a feature that allowed users to choose between Skydi
 
 <b>Implemented:</b>
 
+Screenshots of the implemented results can be found in the ![READ-ME](/READ-ME.md) file. 
+
 ---
 
 # Conclusion and Future Work <a name="cfw"></a>
