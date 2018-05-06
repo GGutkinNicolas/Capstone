@@ -68,6 +68,9 @@ The last feature is a weather report of any desired location. The user enters a 
 # Design, Development, and Test <a name="ddt"></a>
 
 ## Design <a name="design"></a>
+
+![Diagram](screenshots/Diagram.png)
+
 ## Development <a name="development"></a>
 ## Test <a name="test"></a>
 
@@ -89,8 +92,6 @@ By the end of the Capstone class the core features implemented include: a login/
 |Profile Page| X | |
 |Weather Page| X | |
 
-<b>Not Implemented:</b>
-
 The “Profile Picture” is a feature that I haven’t implemented yet. To implement this I will create a new table that has two columns: a username, and a picture. When users want to change the picture it will delete that users entry in the table and enter in a new one after with the new picture. This feature wasn’t implemented simply because I ran out of time. The hardest obstacle I might encounter is formatting the image to fit to a specific frame. 
 
 The “Visited Drop Zones” and “Link to Skydivers Instruction Manual” are two features I decided to remove early on in the development process too make the application easier to use. I was afraid that too many extra features such as those would overwhelm the users like the other two existing applications did for me. Also I figure that they would have pictures or mementos to remember the drop zones they had visited. 
@@ -98,8 +99,6 @@ The “Visited Drop Zones” and “Link to Skydivers Instruction Manual” are 
 The “Skydiving News” would have been a neat feature to add however I did not find any existing libraries that would allow me to pull that kind of information. To incorporate this feature I would have to create a web scrapper that visits the Red Bull Air Force and USPA websites daily, assess if the information is useful, and then format and send it to my application. It doesn’t seem impossible, but it is a bigger project that I didn’t have time for in our sixteen week timeline. 
 
 The “SCUBA version” was a feature that allowed users to choose between Skydiving and SCUBA at the login page, and the application would redirect to the appropriate platform. The idea initially started because both sports require a logbook that tracks and analyzes the information. It was a cool idea at the beginning, but as the development progressed I realized that it is a different project all together since both sports don’t necessarily intertwine. 
-
-<b>Implemented:</b>
 
 Screenshots of the implemented results can be found in the ![READ-ME](/READ-ME.md) file. 
 

@@ -49,7 +49,7 @@ A prototype of an iOS app to log skydives. A simpler approach to the current pen
 
 **Resources**
 
-![Technical Report](FinalTechnicalReport.md)
+![Technical Report](/FinalTechnicalReport.md)
 
     
 
